@@ -1,0 +1,172 @@
+# ClearPrice Oncology Intelligence — Houston Area v1 Design
+
+Date: 2026-07-15
+Status: Approved for planning
+
+## 1. Purpose
+
+Turn hospital MRF (machine-readable file) price transparency data into a tool that
+answers, per oncology drug per hospital: *is this charge fair, relative to what
+Medicare pays (ASP) and what the drug costs to acquire (WAC/340B)?*
+
+Scope of v1: Houston-area hospitals only. Architecture must generalize to other
+metros/states later without rework (Epic 6 in `MRF_Intelligence_Product_BA.md`),
+but v1 ships Houston only.
+
+Grounded in, and must stay consistent with:
+- `MRF_Intelligence_Product_BA.md` (epics, personas, data source mapping)
+- `Specialty Drug Pricing MRF Intelligence Report.md` (source figures, cited by section)
+- `ClearPrice_Build_Methodology.html` §4 (worked example — the exact output template)
+- `oncology_top5_by_category.json`, `oncology_top5_asp_reference.json`,
+  `340B_pricing_research.md` (already-verified data for Houston Methodist Hospital)
+
+**Hard rule carried through every section below: no number is invented, estimated,
+or interpolated without an explicit source citation and, where it's a calculation
+rather than a quoted figure, an explicit formula shown next to it.**
+
+## 2. Hospital universe (Houston scope)
+
+Source: `Texas_validated_final.xlsx`, sheet `MRF Validation` (700 Texas hospitals,
+columns: Hospital Name, Homepage URL, MRF Link, MRF File Type, Link Status, HTTP
+Code, Detected From, Notes). No city/address column exists, so hospital selection
+is done by name-pattern matching against known Houston-metro branch names and
+health systems, manually reviewed and approved (see conversation log for the
+review pass — 5 false positives removed: Ascension Seton Southwest Hospital,
+North Texas Medical Center, Cypress Creek Hospital, Kingwood Pines Hospital,
+Nexus Specialty Hospital-The Woodlands).
+
+**Inclusion rule:**
+- Acute-care general or cancer-treating hospital
+- Branch name maps to a Houston-metro city/area (Houston, Sugar Land, The
+  Woodlands, Baytown, Cypress, Clear Lake, Kingwood, Tomball, Willowbrook,
+  Pearland, Conroe, Katy, League City, Missouri City, Richmond, etc.), or is a
+  known Houston-anchored system branch (Memorial Hermann, Texas Children's, Ben
+  Taub, Houston Methodist, HCA Houston Healthcare)
+- MRF link status = OK (HTTP 200) at last validation
+
+**Exclusion rule:**
+- Standalone behavioral-health, physical-rehab-only, or orthopedic-only facilities
+  (no oncology infusion service line)
+- Branches of a matching chain name located outside Houston metro (e.g. Lufkin,
+  Livingston, San Augustine, Lake Jackson, San Antonio, Austin)
+- Broken/dead links (404 / NOT_FOUND) — excluded from ingestion, not fabricated
+
+**Locked v1 list: 44 hospitals with working MRF links** (10 more matched the
+naming pattern but had dead links and are excluded), spanning: Houston Methodist
+(8, including the already-parsed Houston Methodist Hospital), HCA Houston
+Healthcare (9), Memorial Hermann (10, incl. Children's/Women's), Texas Children's
+(3), St. Luke's Health (2) + Baylor St. Luke's (1), UTMB Health (2), Ben Taub (1),
+BMC Baytown (1), Houston Physicians' (1). Full list with URLs cached at
+`houston_candidates_final.json`.
+
+Formats across these 44: mixed json, csv, zip (needs unzip step), and
+Azure-blob-with-SAS-token URLs. No uniform schema can be assumed beyond the
+CMS-mandated MRF field set.
+
+## 3. Ingestion pipeline
+
+Per hospital, in order:
+1. **Fetch** — download the MRF link. Handle zip (extract), SAS-token URLs
+   (pass through query string as-is, don't strip).
+2. **Parse** — load into the hospital's native schema (CMS standard-charges JSON
+   schema, or CMS-required wide/tall CSV format).
+3. **Filter** — extract only line items whose `code_information` matches one of
+   the 33 target HCPCS/Q codes already defined in `oncology_top5_by_category.json`.
+   Nothing else is extracted or stored.
+4. **Normalize** — reshape into the same structure already used in
+   `oncology_top5_by_category.json` (description, code, standard_charges by
+   setting/billing_class, payers_information array).
+5. **Tag provenance** — every normalized record stores: hospital name, source
+   file name/URL, retrieval timestamp.
+6. **Failure handling (explicit, never silent):**
+   - Code not published by this hospital → `not published by this hospital`
+   - File fails to parse / unsupported schema / link now dead → `ingestion
+     failed: <reason>`, hospital excluded from results for that drug only (not
+     dropped from the hospital list entirely — other drugs from the same
+     hospital may still have parsed fine)
+
+Output: one normalized dataset per hospital, same shape as the existing
+Methodist Hospital file, stored under a `houston_hospitals/` data directory (git
+ignored — large source files stay on disk, not in the repo).
+
+## 4. 340B enrollment verification ("verify twice" requirement)
+
+Per hospital, query HRSA's **public** 340B OPAIS covered-entity search (the
+covered-entity enrollment lookup is public; only the ceiling-price-per-NDC lookup
+is login-gated — confirmed in `340B_pricing_research.md` §"Why exact 340B ceiling
+prices are not shown"). Match by hospital name / NPI.
+
+- Run the lookup **twice**, independently, before setting the enrollment flag.
+  Both results must agree; a mismatch is logged and the hospital's 340B status is
+  marked `unverified` rather than guessed.
+- Cache: enrollment status (yes/no/unverified), lookup date, source URL.
+- If enrolled → the calc engine includes the ASP−27% acquisition-cost line and
+  spread (Section 5 below), explicitly labeled as an industry-average estimate,
+  not the hospital's actual confidential ceiling price.
+- If not enrolled → that line is omitted entirely; only ASP+6% standard
+  reimbursement math applies.
+
+## 5. Calculation engine
+
+Runs per (selected drug × hospital), reproducing exactly the structure in
+`ClearPrice_Build_Methodology.html` §4:
+
+| Layer | Value | Source |
+|---|---|---|
+| Hospital gross charge (min–max, per payer, per setting) | from that hospital's normalized MRF extract | hospital MRF file name + retrieval date |
+| CMS Medicare Part B ASP payment limit | `oncology_top5_asp_reference.json` | CMS ASP Payment Limit File, current quarter |
+| ASP+6% (standard Part B reimbursement) | calculated: ASP × 1.06 | formula shown inline |
+| ASP−27% (est. 340B acquisition cost) — **only if hospital verified 340B-enrolled** | calculated: ASP × 0.73 | formula shown inline, labeled "industry-average discount (COA report), not this hospital's actual ceiling price" |
+| 340B spread | calculated: reimbursement − est. acquisition cost | formula shown inline |
+| WAC/list benchmark | `340B_pricing_research.md` | per-drug citation link already in that file |
+| Markup ratio | calculated: gross_charge ÷ ASP | flagged if > 3x (per BA doc Epic 4 threshold) |
+| CGT reimbursement risk (Q2041/Q2042/Q2055/Q2054/Q2056 only) | DRG payment ($269,139 / $314,231) vs. list-price acquisition cost | red flag if hospital's negotiated/DRG reimbursement is below list-price benchmark |
+
+Every rendered number carries a visible source tag (file name+date, or a link)
+matching the citation style already in `340B_pricing_research.md` and the HTML's
+`<span class="src">` treatment. No field renders blank-but-implied-zero; codes
+with no available benchmark show "not publicly available."
+
+## 6. UI
+
+- **Drug picker:** all 33 drugs as checkboxes, grouped under their 7 categories
+  (Chemotherapy, Immunotherapy, Targeted Therapy, Hormone Therapy, Supportive
+  Care, Antibody-Drug Conjugates, Cellular and Gene Therapy) — same taxonomy as
+  `oncology_top5_by_category.json`.
+- **Results view:** on selection, list only hospitals (of the 44) that publish at
+  least one selected drug. Hospitals with a failed ingestion for a given drug show
+  "MRF unavailable" for that cell instead of being silently dropped from the list.
+- **Detail view:** clicking a drug/hospital pair opens the full Section-4-style
+  breakdown — readout cards, sources table, verdict block (profit/loss per
+  scenario), margin-formula table, all-payer rate table — computed live from
+  ingested data, not hardcoded to the Keytruda example.
+- **Visual style:** reuse the existing `ClearPrice_Build_Methodology.html`
+  look (same CSS variables/typography) for continuity.
+
+## 7. Tech stack
+
+- **Backend:** Python (ingestion pipeline + calc engine + FastAPI JSON API) —
+  consistent with the user's existing Python/Anaconda environment.
+- **Frontend:** plain HTML/JS (no build step), styled to match the existing
+  methodology HTML. No framework needed for a checkbox-driven, single-page tool.
+- **Data storage:** normalized per-hospital JSON files on disk (not a database —
+  44 hospitals × 33 drugs is small, file-based is simplest and keeps every
+  record traceable to its source file).
+
+## 8. Out of scope for v1 (stated, not hidden)
+
+- True 340B ceiling price per drug (HRSA OPAIS ceiling-price lookup is
+  login-gated; not obtainable — same conclusion as `340B_pricing_research.md`).
+- Non-Houston hospitals (Phase 2, per BA doc Epic 6).
+- Payer Transparency-in-Coverage MRFs (Phase 2, per BA doc Epic 6).
+- The 5 excluded false-positive hospitals and 10 dead-link hospitals from the
+  naming-pattern match — not ingested in v1.
+
+## 9. Open verification note
+
+MD Anderson Cancer Center and Kelsey-Seybold Clinic — both real, prominent
+Houston oncology providers — do **not** appear anywhere in
+`Texas_validated_final.xlsx`'s 700-row list under any name variant checked. They
+are excluded from v1 not because they were reviewed and rejected, but because no
+MRF link for them exists in the source file at all. Flagged here rather than
+silently omitted.

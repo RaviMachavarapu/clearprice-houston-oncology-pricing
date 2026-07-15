@@ -1,0 +1,13 @@
+*.json
+!oncology_top5_by_category.json
+!oncology_top5_asp_reference.json
+!houston_candidates_final.json
+*_standardcharges.json
+*.csv
+!texas_dump.csv
+*.xlsx
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+raw_mrf_cache/
