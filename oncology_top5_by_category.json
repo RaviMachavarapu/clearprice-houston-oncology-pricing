@@ -1,0 +1,4427 @@
+{
+  "hospital_name": "The Methodist Hospital",
+  "last_updated_on": "2026-04-01",
+  "version": "3.0.0",
+  "source_file": "hcpcs_only_standardcharges.json",
+  "notes": "Top 5 HCPCS codes per oncology category selected by real-world market usage. Only codes this hospital actually publishes are included below — no substitutions. Categories with fewer than 5 entries mean the hospital does not publish charges for the remaining top-5 market drugs in that category (listed in missing_top5_not_in_hospital_file).",
+  "missing_top5_not_in_hospital_file": {
+    "Chemotherapy": [
+      "J9070 Cyclophosphamide"
+    ],
+    "Immunotherapy": [],
+    "Targeted Therapy": [],
+    "Hormone Therapy": [],
+    "Supportive Care": [
+      "J2505 Pegfilgrastim (Neulasta)"
+    ],
+    "Antibody-Drug Conjugates": [],
+    "Cellular and Gene Therapy": []
+  },
+  "total_line_items": 33,
+  "oncology_top5_charge_information": [
+    {
+      "description": "Paclitaxel injection",
+      "code_information": [
+        {
+          "code": "J9267",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 0.24,
+          "maximum": 0.7,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.25
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.24
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.7
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.26
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.26
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.28
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.7
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Chemotherapy",
+      "market_drug_name": "Paclitaxel"
+    },
+    {
+      "description": "Carboplatin injection",
+      "code_information": [
+        {
+          "code": "J9045",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 4.96,
+          "maximum": 15.7,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.31
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.06
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 10.45
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.96
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.96
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 5.28
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 15.7
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Chemotherapy",
+      "market_drug_name": "Carboplatin"
+    },
+    {
+      "description": "Docetaxel injection",
+      "code_information": [
+        {
+          "code": "J9171",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 0.85,
+          "maximum": 9.44,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.67
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.62
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.44
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.85
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.85
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.9
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3.27
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Chemotherapy",
+      "market_drug_name": "Docetaxel"
+    },
+    {
+      "description": "Doxorubicin hcl injection",
+      "code_information": [
+        {
+          "code": "J9000",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 6.39,
+          "maximum": 16.88,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 7.6
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 7.37
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 13.61
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 6.39
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 6.39
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 6.8
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 16.88
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Chemotherapy",
+      "market_drug_name": "Doxorubicin HCl"
+    },
+    {
+      "description": "Inj pembrolizumab",
+      "code_information": [
+        {
+          "code": "J9271",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 60.29,
+          "maximum": 318.01,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 131.9
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 61.2,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 127.87
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 187.2
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 60.29,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 137.62
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 137.62
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 146.4
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 62.1,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 64.51,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 98.27,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 63.31,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 130.23,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 117.57,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 66.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 241.16,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 318.01
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 61.5,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 60.29,
+          "maximum": 60.29,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 60.29,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Immunotherapy",
+      "market_drug_name": "Pembrolizumab (Keytruda)"
+    },
+    {
+      "description": "Injection, nivolumab",
+      "code_information": [
+        {
+          "code": "J9299",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 32.96,
+          "maximum": 173.34,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 73.97
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 33.46,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 71.71
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 107.13
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 32.96,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 77.55
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 77.55
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 82.5
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 33.95,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 35.27,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 53.73,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 34.61,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 71.2,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 64.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 36.26,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 131.86,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 173.34
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 33.62,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 32.96,
+          "maximum": 32.96,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 32.96,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Immunotherapy",
+      "market_drug_name": "Nivolumab (Opdivo)"
+    },
+    {
+      "description": "Inj, atezolizumab,10 mg",
+      "code_information": [
+        {
+          "code": "J9022",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 91.34,
+          "maximum": 478.97,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 202.02
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 92.71,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 195.85
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 294.49
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 91.34,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 213.9
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 213.9
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 227.55
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 94.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 97.73,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 148.88,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 95.91,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 197.29,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 178.11,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 100.47,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 365.36,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 478.97
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 93.17,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 91.34,
+          "maximum": 91.34,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 91.34,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Immunotherapy",
+      "market_drug_name": "Atezolizumab (Tecentriq)"
+    },
+    {
+      "description": "Ipilimumab injection",
+      "code_information": [
+        {
+          "code": "J9228",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 183.48,
+          "maximum": 965.65,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 412.31
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 186.23,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 399.71
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 571.19
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 183.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 431.01
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 431.01
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 458.53
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 188.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 196.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 299.07,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 192.65,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 396.31,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 357.78,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 201.83,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 733.92,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 965.65
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 187.15,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 183.48,
+          "maximum": 183.48,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 183.48,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Immunotherapy",
+      "market_drug_name": "Ipilimumab (Yervoy)"
+    },
+    {
+      "description": "Inj., durvalumab, 10 mg",
+      "code_information": [
+        {
+          "code": "J9173",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 85.12,
+          "maximum": 449.39,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 192.09
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 86.4,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 186.21
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 290.08
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 85.12,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 200.34
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 200.34
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 213.13
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 87.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 91.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 138.75,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 89.38,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 183.86,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 165.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 93.63,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 340.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 449.39
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 86.82,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 85.12,
+          "maximum": 85.12,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 85.12,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Immunotherapy",
+      "market_drug_name": "Durvalumab (Imfinzi)"
+    },
+    {
+      "description": "Bevacizumab injection",
+      "code_information": [
+        {
+          "code": "J9035",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 73.2,
+          "maximum": 389.7,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 167.61
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 74.3,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 162.48
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 308.65
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 73.2,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 171.67
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 171.67
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 182.63
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.4,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.33,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 119.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 76.86,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 158.11,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 142.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 80.52,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 292.8,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 389.7
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 74.67,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 73.2,
+          "maximum": 73.2,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 73.2,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Targeted Therapy",
+      "market_drug_name": "Bevacizumab (Avastin)"
+    },
+    {
+      "description": "Trastuzumab injection",
+      "code_information": [
+        {
+          "code": "J9355",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 75.03,
+          "maximum": 405.56,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 176.44
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 76.15,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 171.05
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 401.86
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.03,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 179.02
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 179.02
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 190.45
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 77.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 80.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 122.29,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.78,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 162.05,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 146.3,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 82.53,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 300.1,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 405.56
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 76.53,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 75.03,
+          "maximum": 75.03,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.03,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Targeted Therapy",
+      "market_drug_name": "Trastuzumab (Herceptin)"
+    },
+    {
+      "description": "Inj., rituximab, 10 mg",
+      "code_information": [
+        {
+          "code": "J9312",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 75.22,
+          "maximum": 409.53,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 175.71
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 76.35,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 170.34
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 363.83
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.22,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 178.44
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 178.44
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 189.83
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 77.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 80.49,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 122.61,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 162.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 146.68,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 82.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 300.88,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 409.53
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 76.72,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 75.22,
+          "maximum": 75.22,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.22,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Targeted Therapy",
+      "market_drug_name": "Rituximab (Rituxan)"
+    },
+    {
+      "description": "Cetuximab injection",
+      "code_information": [
+        {
+          "code": "J9055",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 78.37,
+          "maximum": 415.37,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 176.56
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 79.54,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 171.16
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 246.87
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.37,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 184.4
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 184.4
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 196.18
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 80.72,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 83.85,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 127.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 82.29,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 169.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 152.82,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 86.21,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 313.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 415.37
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 79.94,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 78.37,
+          "maximum": 78.37,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.37,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Targeted Therapy",
+      "market_drug_name": "Cetuximab (Erbitux)"
+    },
+    {
+      "description": "Panitumumab injection",
+      "code_information": [
+        {
+          "code": "J9303",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 173.03,
+          "maximum": 883.67,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 379.48
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 175.63,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 367.88
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 482.24
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 173.03,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 405.49
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 405.49
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 431.38
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 178.22,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 185.14,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 282.04,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 181.68,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 373.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 337.41,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 190.33,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 692.12,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 883.67
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 176.49,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 173.03,
+          "maximum": 173.03,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 173.03,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Targeted Therapy",
+      "market_drug_name": "Panitumumab (Vectibix)"
+    },
+    {
+      "description": "Leuprolide acetate /3.75 mg",
+      "code_information": [
+        {
+          "code": "J1950",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 1730.32,
+          "maximum": 8949.8,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3816.93
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1756.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3700.25
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2964.43
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1730.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4082.19
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4082.19
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4342.75
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1782.23,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1851.45,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2820.43,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1816.84,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3737.5,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3374.13,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1903.36,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 6921.3,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8949.8
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1764.93,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 1730.32,
+          "maximum": 1730.32,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1730.32,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Hormone Therapy",
+      "market_drug_name": "Leuprolide acetate"
+    },
+    {
+      "description": "Goserelin acetate implant",
+      "code_information": [
+        {
+          "code": "J9202",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 733.66,
+          "maximum": 3778.28,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1610.01
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 744.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1560.79
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2279.04
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 733.66,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1725.25
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1725.25
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1835.38
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 755.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 785.02,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1195.87,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 770.35,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1584.72,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1430.65,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 807.03,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2934.66,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3778.28
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 748.34,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 733.66,
+          "maximum": 733.66,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 733.66,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Hormone Therapy",
+      "market_drug_name": "Goserelin acetate"
+    },
+    {
+      "description": "Injection, Fulvestrant",
+      "code_information": [
+        {
+          "code": "J9395",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 14.79,
+          "maximum": 321.36,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 15.25
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 14.79
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 321.36
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 16.4
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 16.4
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 17.45
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 36.97
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Hormone Therapy",
+      "market_drug_name": "Fulvestrant (Faslodex)"
+    },
+    {
+      "description": "Degarelix injection",
+      "code_information": [
+        {
+          "code": "J9155",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 4.45,
+          "maximum": 23.36,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.8
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.51,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.5
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 23.13
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.45,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 10.25
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 10.25
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 10.9
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.58,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.76,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 7.25,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.61,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.89,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 17.79,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 23.36
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.54,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 4.45,
+          "maximum": 4.45,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 4.45,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Hormone Therapy",
+      "market_drug_name": "Degarelix (Firmagon)"
+    },
+    {
+      "description": "Triptorelin pamoate",
+      "code_information": [
+        {
+          "code": "J3315",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 474.84,
+          "maximum": 2527.09,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1102.15
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 481.96,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1068.46
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2427.95
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 474.84,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1155.97
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1155.97
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1229.75
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 489.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 508.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 773.99,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 498.58,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1025.65,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 925.93,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 522.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1899.35,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2527.09
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 484.33,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 474.84,
+          "maximum": 474.84,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 474.84,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Hormone Therapy",
+      "market_drug_name": "Triptorelin (Trelstar)"
+    },
+    {
+      "description": "Inj filgrastim excl biosimil",
+      "code_information": [
+        {
+          "code": "J1442",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 1.0,
+          "maximum": 5.25,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.24
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.01,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.18
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3.9
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.0,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.33
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.33
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.48
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.03,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.07,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.62,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.05,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.15,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.94,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.1,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 5.25
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.02,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 1.0,
+          "maximum": 1.0,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.0,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Supportive Care",
+      "market_drug_name": "Filgrastim (Neupogen)"
+    },
+    {
+      "description": "Ondansetron hcl injection",
+      "code_information": [
+        {
+          "code": "J2405",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 0.2,
+          "maximum": 2.3,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.21
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.2
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.3
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.95
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1.95
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2.08
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 0.48
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Supportive Care",
+      "market_drug_name": "Ondansetron"
+    },
+    {
+      "description": "Denosumab injection",
+      "code_information": [
+        {
+          "code": "J0897",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 29.38,
+          "maximum": 149.01,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 63.34
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.82,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 61.41
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 72.31
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.38,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 68.71
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 68.71
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 73.1
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 30.26,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 31.44,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 47.89,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 30.85,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 63.46,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 57.29,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 32.32,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 117.52,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 149.01
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.97,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 29.38,
+          "maximum": 29.38,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.38,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Supportive Care",
+      "market_drug_name": "Denosumab (Xgeva)"
+    },
+    {
+      "description": "Epoetin alfa, non-esrd",
+      "code_information": [
+        {
+          "code": "J0885",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 8.54,
+          "maximum": 62.24,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 14.79
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 14.34
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 62.24
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.54,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 18.05
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 18.05
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 19.2
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.8,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.14,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 13.93,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.97,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 18.46,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 16.66,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 9.4,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 34.18,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 37.94
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.71,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 8.54,
+          "maximum": 8.54,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 8.54,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Supportive Care",
+      "market_drug_name": "Epoetin alfa"
+    },
+    {
+      "description": "Inj, ado-trastuzumab emt 1mg",
+      "code_information": [
+        {
+          "code": "J9354",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 42.16,
+          "maximum": 220.28,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 93.82
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 42.79,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 90.95
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 118.6
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 42.16,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 98.35
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 98.35
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 104.63
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 43.42,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 45.11,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 68.72,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 44.27,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 91.07,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 82.21,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 46.38,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 168.64,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 220.28
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 43.0,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 42.16,
+          "maximum": 42.16,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 42.16,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Antibody-Drug Conjugates",
+      "market_drug_name": "Trastuzumab emtansine (Kadcyla)"
+    },
+    {
+      "description": "Inj fam-trastu deru-nxki 1mg",
+      "code_information": [
+        {
+          "code": "J9358",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 29.98,
+          "maximum": 154.85,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 65.97
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 30.43,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 63.96
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 105.03
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 70.5
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 70.5
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 75.0
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 30.88,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 32.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 48.86,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 31.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 64.75,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 58.46,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 32.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 119.91,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 154.85
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 30.58,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 29.98,
+          "maximum": 29.98,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 29.98,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Antibody-Drug Conjugates",
+      "market_drug_name": "Fam-trastuzumab deruxtecan (Enhertu)"
+    },
+    {
+      "description": "Sacituzumab govitecan-hziy",
+      "code_information": [
+        {
+          "code": "J9317",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 36.28,
+          "maximum": 191.82,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 81.16
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 36.82,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.68
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 128.12
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 36.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 85.21
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 85.21
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 90.65
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 37.36,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 38.82,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 59.13,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 38.09,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 78.36,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 70.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 39.9,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 145.1,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 191.82
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 37.0,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 36.28,
+          "maximum": 36.28,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 36.28,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Antibody-Drug Conjugates",
+      "market_drug_name": "Sacituzumab govitecan (Trodelvy)"
+    },
+    {
+      "description": "Brentuximab vedotin inj",
+      "code_information": [
+        {
+          "code": "J9042",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 258.64,
+          "maximum": 1333.82,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Hmo/Pos/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 570.05
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 262.52,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Aetna",
+              "plan_name": "New Business Discount Other Commercial Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 552.62
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 614.68
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 258.64,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 607.52
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 607.52
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 646.3
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 266.4,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 276.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 421.58,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 271.57,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 558.66,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 504.35,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 284.5,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1034.56,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1333.82
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 263.81,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 258.64,
+          "maximum": 258.64,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 258.64,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Antibody-Drug Conjugates",
+      "market_drug_name": "Brentuximab vedotin (Adcetris)"
+    },
+    {
+      "description": "Inj, polatuzumab vedotin 1mg",
+      "code_information": [
+        {
+          "code": "J9309",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 136.67,
+          "maximum": 711.19,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 138.72,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 492.26
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 136.67,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Local Plus/Surefit Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 320.14
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Network C-24 Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 320.14
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Pcp Optional/Pcp Required Benefit Plans Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 340.58
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 140.77,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 146.23,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 222.77,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 143.5,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 295.2,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 266.5,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 150.33,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 546.66,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 711.19
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 139.4,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 136.67,
+          "maximum": 136.67,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 136.67,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Antibody-Drug Conjugates",
+      "market_drug_name": "Polatuzumab vedotin (Polivy)"
+    },
+    {
+      "description": "Axicabtagene ciloleucel car+",
+      "code_information": [
+        {
+          "code": "Q2041",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 533230.17,
+          "maximum": 2694321.2,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 541228.62,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 533230.17,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 549227.08,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 570556.28,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 869165.18,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 559891.68,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1151777.17,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1039798.83,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 586553.19,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2132920.68,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2694321.2
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 543894.77,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 533230.17,
+          "maximum": 533230.17,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 533230.17,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Cellular and Gene Therapy",
+      "market_drug_name": "Axicabtagene ciloleucel (Yescarta)"
+    },
+    {
+      "description": "Tisagenlecleucel car-pos t",
+      "code_information": [
+        {
+          "code": "Q2042",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 591726.2,
+          "maximum": 3101171.42,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 600602.09,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 591726.2,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 609477.99,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 633147.04,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 964513.71,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 621312.51,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1278128.59,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1153866.09,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 650898.82,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2366904.8,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 3101171.42
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 603560.73,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 591726.2,
+          "maximum": 591726.2,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 591726.2,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Cellular and Gene Therapy",
+      "market_drug_name": "Tisagenlecleucel (Kymriah)"
+    },
+    {
+      "description": "Idecabtagene vicleucel car",
+      "code_information": [
+        {
+          "code": "Q2055",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 557317.93,
+          "maximum": 2827106.67,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 565677.7,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 557317.93,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 574037.47,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 596330.19,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 908428.23,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 585183.83,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1203806.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1086769.97,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 613049.73,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2229271.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2827106.67
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 568464.29,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 557317.93,
+          "maximum": 557317.93,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 557317.93,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Cellular and Gene Therapy",
+      "market_drug_name": "Idecabtagene vicleucel (Abecma)"
+    },
+    {
+      "description": "Lisocabtagene mara car pos t",
+      "code_information": [
+        {
+          "code": "Q2054",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 562538.19,
+          "maximum": 2767201.08,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 570976.26,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 562538.19,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 579414.33,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 601915.86,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 916937.24,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 590665.09,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1215082.48,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1096949.46,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 618792.0,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2250152.74,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2767201.08
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 573788.95,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 562538.19,
+          "maximum": 562538.19,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 562538.19,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Cellular and Gene Therapy",
+      "market_drug_name": "Lisocabtagene maraleucel (Breyanzi)"
+    },
+    {
+      "description": "Ciltacabtagene car-pos t",
+      "code_information": [
+        {
+          "code": "Q2056",
+          "type": "HCPCS"
+        }
+      ],
+      "standard_charges": [
+        {
+          "setting": "outpatient",
+          "billing_class": "facility",
+          "minimum": 565868.94,
+          "maximum": 2963991.74,
+          "payers_information": [
+            {
+              "payer_name": "Aetna",
+              "plan_name": "Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 574356.98,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Bcbs",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 565868.94,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 582845.01,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "D-Snp Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 605479.77,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Community Health Choice",
+              "plan_name": "Silver & Gold Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 922366.38,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Advantage Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 594162.39,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Molina Healthcare",
+              "plan_name": "Exchange",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1222276.92,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Optum Health",
+              "plan_name": "Transplant Medicare Managed Care Plan",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 1103444.44,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Procare Advantage",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 622455.84,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Uae",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2263475.78,
+              "additional_payer_notes": "APC"
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "All Commercial Plans",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 2963991.74
+            },
+            {
+              "payer_name": "Unitedhealthcare",
+              "plan_name": "Medicare Managed Care - Hmo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 577186.32,
+              "additional_payer_notes": "APC"
+            }
+          ]
+        },
+        {
+          "setting": "inpatient",
+          "billing_class": "facility",
+          "minimum": 565868.94,
+          "maximum": 565868.94,
+          "payers_information": [
+            {
+              "payer_name": "Cigna",
+              "plan_name": "Texas Healthspring Medicare Managed Care - Hmo/Ppo",
+              "methodology": "fee schedule",
+              "standard_charge_dollar": 565868.94,
+              "additional_payer_notes": "IP High Cost Drugs"
+            }
+          ]
+        }
+      ],
+      "has_payer_specific_rates": true,
+      "oncology_category": "Cellular and Gene Therapy",
+      "market_drug_name": "Ciltacabtagene autoleucel (Carvykti)"
+    }
+  ]
+}

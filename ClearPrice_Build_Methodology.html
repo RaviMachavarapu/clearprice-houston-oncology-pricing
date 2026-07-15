@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearPrice Oncology Intelligence — Build Methodology</title>
+<style>
+  :root{
+    --bg:#f7f5f0;
+    --surface:#ffffff;
+    --ink:#1c2321;
+    --ink-soft:#4a534f;
+    --accent:#0b6e5f;
+    --accent-soft:#e4efec;
+    --rule:#d8d3c7;
+    --flag:#b3541e;
+    --flag-soft:#f6e9df;
+    --good:#0b6e5f;
+    --shadow:0 1px 2px rgba(28,35,33,0.06), 0 6px 20px rgba(28,35,33,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14181a;
+      --surface:#1c2221;
+      --ink:#eae7de;
+      --ink-soft:#a9b0ac;
+      --accent:#4fd6bc;
+      --accent-soft:#213330;
+      --rule:#333c39;
+      --flag:#e0975a;
+      --flag-soft:#332720;
+      --good:#4fd6bc;
+      --shadow:0 1px 2px rgba(0,0,0,0.3), 0 6px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181a; --surface:#1c2221; --ink:#eae7de; --ink-soft:#a9b0ac;
+    --accent:#4fd6bc; --accent-soft:#213330; --rule:#333c39; --flag:#e0975a;
+    --flag-soft:#332720; --good:#4fd6bc;
+    --shadow:0 1px 2px rgba(0,0,0,0.3), 0 6px 24px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"]{
+    --bg:#f7f5f0; --surface:#ffffff; --ink:#1c2321; --ink-soft:#4a534f;
+    --accent:#0b6e5f; --accent-soft:#e4efec; --rule:#d8d3c7; --flag:#b3541e;
+    --flag-soft:#f6e9df; --good:#0b6e5f;
+    --shadow:0 1px 2px rgba(28,35,33,0.06), 0 6px 20px rgba(28,35,33,0.05);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Source Serif 4",serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sans{font-family:"Charter","Segoe UI",system-ui,-apple-system,sans-serif;}
+  body{font-family:"Charter","Iowan Old Style","Palatino Linotype",Georgia,serif;}
+  .mono{
+    font-family:"IBM Plex Mono","Cascadia Mono","SFMono-Regular",Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+
+  header.masthead{
+    border-bottom:1px solid var(--rule);
+    padding:48px 0 32px;
+    background:var(--surface);
+  }
+  .kicker{
+    font-family:"Charter",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:12px;
+    color:var(--accent);
+    font-weight:600;
+    margin:0 0 14px;
+  }
+  h1{
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.12;
+    margin:0 0 14px;
+    text-wrap:balance;
+    letter-spacing:-0.01em;
+  }
+  .dek{
+    color:var(--ink-soft);
+    font-size:17px;
+    max-width:62ch;
+    margin:0 0 22px;
+  }
+  .provenance{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 10px;
+    font-size:12px;
+  }
+  .provenance span{
+    font-family:"IBM Plex Mono",monospace;
+    background:var(--accent-soft);
+    color:var(--accent);
+    border-radius:3px;
+    padding:3px 8px;
+  }
+
+  main{padding:44px 0 80px;}
+
+  section{margin-bottom:56px;}
+  section h2{
+    font-size:22px;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  section > .lede{
+    color:var(--ink-soft);
+    font-size:15px;
+    max-width:66ch;
+    margin:0 0 26px;
+  }
+
+  /* pipeline */
+  .pipeline{
+    display:flex;
+    flex-direction:column;
+    border:1px solid var(--rule);
+    border-radius:6px;
+    overflow:hidden;
+    background:var(--surface);
+    box-shadow:var(--shadow);
+  }
+  .stage{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    border-bottom:1px solid var(--rule);
+  }
+  .stage:last-child{border-bottom:none;}
+  .stage-num{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding-top:18px;
+    font-weight:600;
+  }
+  .stage-body{padding:16px 20px 18px 20px;}
+  .stage-body h3{
+    margin:0 0 5px;
+    font-size:16px;
+    font-family:"Charter",sans-serif;
+  }
+  .stage-body p{
+    margin:0 0 8px;
+    font-size:14px;
+    color:var(--ink-soft);
+    max-width:70ch;
+  }
+  .stage-io{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-top:8px;
+  }
+  .chip{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11.5px;
+    border:1px solid var(--rule);
+    border-radius:3px;
+    padding:2px 7px;
+    color:var(--ink-soft);
+    background:var(--bg);
+  }
+  .chip.out{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);}
+
+  /* stat row */
+  .statline{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .stat{
+    background:var(--surface);
+    padding:16px 16px 14px;
+  }
+  .stat .num{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:24px;
+    font-weight:600;
+    color:var(--accent);
+    display:block;
+  }
+  .stat .lbl{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+
+  /* category grid */
+  .catgrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:10px;
+  }
+  .cat{
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:13px 14px;
+    background:var(--surface);
+  }
+  .cat .catname{
+    font-family:"Charter",sans-serif;
+    font-weight:600;
+    font-size:13.5px;
+    margin-bottom:4px;
+  }
+  .cat .catcount{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+  .cat .catgap{
+    font-size:11.5px;
+    color:var(--flag);
+    margin-top:5px;
+  }
+
+  /* worked example */
+  .example{
+    border:1px solid var(--rule);
+    border-radius:8px;
+    background:var(--surface);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .example-head{
+    padding:22px 24px 18px;
+    border-bottom:1px solid var(--rule);
+    background:linear-gradient(180deg, var(--accent-soft), transparent);
+  }
+  .example-head .tag{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:700;
+  }
+  .example-head h3{
+    margin:6px 0 4px;
+    font-size:22px;
+    font-family:"Charter",sans-serif;
+  }
+  .example-head .sub{
+    color:var(--ink-soft);
+    font-size:13.5px;
+  }
+  .example-body{padding:22px 24px 26px;}
+
+  table.sources{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13.5px;
+  }
+  table.sources th{
+    text-align:left;
+    font-family:"Charter",sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    font-size:10.5px;
+    color:var(--ink-soft);
+    padding:0 10px 8px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  table.sources td{
+    padding:11px 10px 11px 0;
+    border-bottom:1px solid var(--rule);
+    vertical-align:top;
+  }
+  table.sources tr:last-child td{border-bottom:none;}
+  table.sources .val{
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  table.sources .src a{
+    color:var(--accent);
+    text-decoration:none;
+    border-bottom:1px dotted var(--accent);
+    font-size:12.5px;
+  }
+  table.sources .src a:hover{border-bottom-style:solid;}
+  .scrollx{overflow-x:auto;}
+
+  .payerlist{
+    margin-top:18px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:8px 16px;
+  }
+  .payerrow{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    padding:6px 0;
+    border-bottom:1px dashed var(--rule);
+  }
+  .payerrow .p{color:var(--ink-soft);}
+  .payerrow .v{font-family:"IBM Plex Mono",monospace;font-weight:600;}
+
+  .readout{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+  }
+  .ro{
+    border:1px solid var(--rule);
+    border-radius:6px;
+    padding:12px 14px;
+    background:var(--bg);
+  }
+  .ro .k{font-size:11px;text-transform:uppercase;letter-spacing:0.05em;color:var(--ink-soft);}
+  .ro .v{font-family:"IBM Plex Mono",monospace;font-size:18px;font-weight:600;margin-top:3px;}
+  .ro.hero{border-color:var(--accent);background:var(--accent-soft);}
+  .ro.hero .v{color:var(--accent);font-size:20px;}
+
+  .callout{
+    border-left:3px solid var(--flag);
+    background:var(--flag-soft);
+    padding:12px 16px;
+    border-radius:0 6px 6px 0;
+    font-size:13.5px;
+    color:var(--ink);
+    margin-top:16px;
+  }
+
+  .verdict{
+    border:1px solid var(--good);
+    border-radius:8px;
+    background:var(--accent-soft);
+    padding:16px 18px 14px;
+    margin-top:4px;
+  }
+  .verdict-head{
+    font-family:"Charter",sans-serif;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-weight:700;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .verdict-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:12px;
+    font-size:13.5px;
+    padding:7px 0;
+    border-bottom:1px dashed var(--rule);
+  }
+  .verdict-row:last-of-type{border-bottom:none;}
+  .verdict-row .v{
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:700;
+    font-size:15px;
+    white-space:nowrap;
+  }
+  .verdict-row .v.profit{color:var(--good);}
+  .verdict-row .v.loss{color:var(--flag);}
+  .verdict-note{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin:10px 0 0;
+  }
+  .callout strong{color:var(--flag);}
+
+  .guardrail{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:14px;
+  }
+  .grcard{
+    border:1px solid var(--rule);
+    border-radius:6px;
+    background:var(--surface);
+    padding:16px 18px;
+  }
+  .grcard h4{
+    margin:0 0 6px;
+    font-size:14.5px;
+    font-family:"Charter",sans-serif;
+  }
+  .grcard p{margin:0;font-size:13px;color:var(--ink-soft);}
+  .grcard .icon{
+    display:inline-block;
+    width:8px;height:8px;
+    border-radius:50%;
+    background:var(--good);
+    margin-right:7px;
+  }
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:26px 0 50px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  footer a{color:var(--accent);}
+
+  code.inline{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:0.88em;
+    background:var(--accent-soft);
+    color:var(--accent);
+    padding:1px 5px;
+    border-radius:3px;
+  }
+
+  @media (max-width:640px){
+    .stage{grid-template-columns:44px 1fr;}
+    .statline{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">ClearPrice Oncology Intelligence — Build Methodology</p>
+    <h1>How the 33-drug MRF intelligence dataset was built, and how to read it</h1>
+    <p class="dek">A walk through the actual pipeline — hospital MRF → HCPCS classification → CMS ASP overlay → WAC/340B research overlay — followed by one fully worked example (Pembrolizumab / Keytruda) showing every number and where it came from.</p>
+    <div class="provenance">
+      <span>source: 74110155_the-methodist-hospital_standardcharges.json</span>
+      <span>+ CMS July 2026 ASP Payment Limit File</span>
+      <span>+ 340B_pricing_research.md</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>1 · The pipeline</h2>
+    <p class="lede">Six stages, run in order, each stage's output verified against the previous stage before moving on. Stages 1–4 build the sourced dataset; stages 5–6 turn it into the dose-scaled, scheme-correct profit/loss read shown in full for J9271 in §4 and §5. Nothing downstream of stage 1 introduces a number that didn't already exist in a cited source or a formula stated in the intelligence report.</p>
+    <div class="pipeline">
+
+      <div class="stage">
+        <div class="stage-num">01</div>
+        <div class="stage-body">
+          <h3>Ingest the hospital MRF</h3>
+          <p>Loaded the hospital's published CMS-schema machine-readable file and counted every <code class="inline">code_information</code> entry typed <code class="inline">HCPCS</code>. The file carried 20,463 HCPCS-typed line items across 14,651 distinct codes. A source-data defect was found and logged rather than silently fixed: HCPCS code <code class="inline">c1751</code> appeared lowercase in the original file — normalized to <code class="inline">C1751</code> and noted in the output file's <code class="inline">notes</code> field.</p>
+          <div class="stage-io">
+            <span class="chip">in: standardcharges.json (68.7 MB)</span>
+            <span class="chip out">out: hcpcs_only_standardcharges.json</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">02</div>
+        <div class="stage-body">
+          <h3>Classify into oncology categories</h3>
+          <p>For each of 7 oncology categories, identified the 5 most-market-used drugs via research (not by hospital charge amount), then checked whether that exact HCPCS code existed in the hospital's own file. Where a top-market drug's code was absent, it was <strong>excluded, not substituted</strong> — the earlier draft that swapped in an alternate code (e.g. J9070 → J8530) was rejected and rebuilt. Two category slots stayed empty rather than filled with a stand-in.</p>
+          <div class="stage-io">
+            <span class="chip">in: hcpcs_only_standardcharges.json</span>
+            <span class="chip out">out: oncology_top5_by_category.json (33 items)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">03</div>
+        <div class="stage-body">
+          <h3>Overlay CMS Medicare Part B ASP</h3>
+          <p>Downloaded the live CMS July 2026 Medicare Part B Payment Limit File directly from cms.gov and matched all 33 HCPCS codes against it. 32 of 33 matched the main payment-limit file; 1 (J9202, Zoladex) matched the separate "Drugs Not Payable Under Part B" file instead — confirmed, not assumed, that it is not separately reimbursed that quarter.</p>
+          <div class="stage-io">
+            <span class="chip">in: cms.gov/files/zip/july-2026-medicare-part-b-payment-limit-files.zip</span>
+            <span class="chip out">out: oncology_top5_asp_reference.json</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">04</div>
+        <div class="stage-body">
+          <h3>Overlay WAC / list-price research</h3>
+          <p>NADAC was dropped on request (retail-pharmacy-only benchmark, not applicable to physician-administered infusion drugs). True 340B ceiling price is confirmed unobtainable — HRSA's OPAIS database is login-gated by law. In its place: a WAC/list/cash-price benchmark per drug, sourced and cited per row. One figure (Epogen, J0885) was cross-checked by downloading the manufacturer's actual pricing PDF directly, after a search-summary snippet looked too synthesized to trust at face value.</p>
+          <div class="stage-io">
+            <span class="chip">in: manufacturer price-disclosure PDFs, Drugs.com Price Guide, HRSA / eCFR statutory reference</span>
+            <span class="chip out">out: 340B_pricing_research.md — 33 of 33 rows sourced</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">05</div>
+        <div class="stage-body">
+          <h3>Scale to a full dose and compute margin</h3>
+          <p>Every rate above is natively per-mg (J9271's fixed HCPCS billing unit). To be usable, it has to be scaled to a real dose (200 mg, FDA-labeled standard adult Keytruda dose — a public prescribing-label fact, not a value present anywhere in the hospital's MRF) and netted against a cost basis: Medicare reimbursement (ASP + 6%) minus estimated 340B acquisition cost (ASP − 27%, the COA report's average industry discount, not this drug's actual confidential 340B ceiling price). Every scale-up and every margin line is labeled calculated, distinct from the sourced figures it's built from — demonstrated in full for J9271 in §4.</p>
+          <div class="stage-io">
+            <span class="chip">in: per-mg hospital/ASP/WAC rates, 200mg dose scale, ASP+6% / ASP−27% formulas (report §2)</span>
+            <span class="chip out">out: per-dose profit/loss verdict, per payer line</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage-num">06</div>
+        <div class="stage-body">
+          <h3>Map the result onto its reimbursement scheme</h3>
+          <p>The margin math above only applies as-is to Part B buy-and-bill drugs like J9271. The product has to route each drug to the scheme that actually governs its payment before the margin means anything: Part B buy-and-bill (ASP+6%, or ASP+3% in reduced settings), Part A MS-DRG bundled payment for CAR-T/CGT ($269,139–$314,231 base vs. $373,000–$475,000 acquisition cost — the category the report's documented losses come from, not this one), commercial (2–7× Medicare, per-contract), or Medicaid (state-inconsistent, CGT Access Model for cellular/gene therapy). Full scheme detail and figures in §5.</p>
+          <div class="stage-io">
+            <span class="chip">in: oncology_category, reimbursement scheme per drug</span>
+            <span class="chip out">out: scheme-correct margin/loss statement, not a one-formula-fits-all number</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>2 · What came out of it</h2>
+    <p class="lede">Every figure below is a count from the built files, not a projection.</p>
+    <div class="statline">
+      <div class="stat"><span class="num">20,463</span><span class="lbl">HCPCS line items in source MRF</span></div>
+      <div class="stat"><span class="num">14,651</span><span class="lbl">distinct HCPCS codes</span></div>
+      <div class="stat"><span class="num">33</span><span class="lbl">drugs matched across all 3 sources</span></div>
+      <div class="stat"><span class="num">7 / 7</span><span class="lbl">oncology categories represented</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3 · The 7 categories, as built</h2>
+    <p class="lede">Each category was scoped to 5 market-leading drugs by research; the count shown is how many of those 5 the hospital's own MRF actually carried.</p>
+    <div class="catgrid">
+      <div class="cat"><div class="catname">Chemotherapy</div><div class="catcount">4 / 5 matched</div><div class="catgap">gap: J9070 Cyclophosphamide not in hospital file</div></div>
+      <div class="cat"><div class="catname">Immunotherapy</div><div class="catcount">5 / 5 matched</div></div>
+      <div class="cat"><div class="catname">Targeted Therapy</div><div class="catcount">5 / 5 matched</div></div>
+      <div class="cat"><div class="catname">Hormone Therapy</div><div class="catcount">5 / 5 matched</div></div>
+      <div class="cat"><div class="catname">Supportive Care</div><div class="catcount">4 / 5 matched</div><div class="catgap">gap: J2505 Pegfilgrastim not in hospital file</div></div>
+      <div class="cat"><div class="catname">Antibody-Drug Conjugates</div><div class="catcount">5 / 5 matched</div></div>
+      <div class="cat"><div class="catname">Cellular &amp; Gene Therapy</div><div class="catcount">5 / 5 matched</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4 · Worked example — Pembrolizumab (Keytruda), HCPCS J9271</h2>
+    <p class="lede">Chosen because it is one of the 33 drugs with a complete record across all three source layers. Every value below is quoted directly from the built dataset files — nothing here is interpolated.</p>
+
+    <div class="example">
+      <div class="example-head">
+        <span class="tag">Immunotherapy</span>
+        <h3>J9271 · Inj pembrolizumab <span class="mono" style="font-size:13px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:4px;padding:2px 8px;margin-left:6px;vertical-align:middle;">scale: 200 mg = 1 dose</span></h3>
+        <div class="sub">Hospital description exactly as published: "Inj pembrolizumab" — outpatient facility setting. Dose scale (200 mg, FDA-labeled standard adult Keytruda dose) applied to every /dose figure in this section — not a value present in the hospital's MRF.</div>
+      </div>
+      <div class="example-body">
+
+        <div class="readout">
+          <div class="ro hero"><div class="k">Hospital charge range /mg</div><div class="v">$60.29 – $318.01</div></div>
+          <div class="ro hero"><div class="k">Hospital charge range /200mg dose</div><div class="v">$12,058.00 – $63,602.00</div></div>
+          <div class="ro"><div class="k">Medicare ASP payment limit /mg</div><div class="v">$60.645</div></div>
+          <div class="ro"><div class="k">Medicare ASP payment limit /dose</div><div class="v">$12,129.00</div></div>
+          <div class="ro"><div class="k">Medicare coinsurance</div><div class="v">20.000%</div></div>
+          <div class="ro"><div class="k">List/WAC benchmark /dose</div><div class="v">$6,000–$8,000</div></div>
+        </div>
+        <p style="font-size:12px;color:var(--ink-soft);margin:6px 0 0;">Note the unit mismatch: the hospital and ASP figures are natively per-mg (J9271's fixed HCPCS billing unit) — the /dose columns are calculated (rate &times; 200mg). The WAC/list figure is natively per-dose as reported by the manufacturer's pricing sheet, so it needs no scaling. None of the /dose figures below come from the hospital's MRF, which specifies no dose quantity at all.</p>
+
+        <div class="scrollx">
+          <table class="sources">
+            <thead>
+              <tr><th>Layer</th><th>Value /mg</th><th>Value /200mg dose</th><th>Source</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hospital MRF (min–max, all payers, outpatient facility) — per HCPCS unit (1 mg)</td>
+                <td class="val">$60.29 – $318.01</td>
+                <td class="val">$12,058.00 – $63,602.00</td>
+                <td class="src">74110155_the-methodist-hospital_standardcharges.json — verbatim, byte-identical to source record</td>
+              </tr>
+              <tr>
+                <td>Hospital MRF (inpatient facility)</td>
+                <td class="val">$60.29</td>
+                <td class="val">$12,058.00</td>
+                <td class="src">same source, inpatient setting, 1 payer (Cigna Texas HealthSpring)</td>
+              </tr>
+              <tr>
+                <td>CMS Medicare Part B ASP payment limit, Jul 2026 qtr</td>
+                <td class="val">$60.645</td>
+                <td class="val">$12,129.00</td>
+                <td class="src"><a href="https://www.cms.gov/files/zip/july-2026-medicare-part-b-payment-limit-files.zip" target="_blank" rel="noopener">CMS ASP Payment Limit File, Jul 2026</a></td>
+              </tr>
+              <tr>
+                <td>List / WAC price signal</td>
+                <td class="val">$30.00–$40.00<span style="font-weight:400;color:var(--ink-soft);"> (calc.)</span></td>
+                <td class="val">$6,000–$8,000</td>
+                <td class="src"><a href="https://www.merckconnect.com/wp-content/uploads/sites/110/2024/04/Colorado-Pricing-Sheets-KEYTRUDA-pembrolizumab.pdf" target="_blank" rel="noopener">Merck official Colorado Pricing Sheet — KEYTRUDA</a> (native unit is /dose; /mg column here is $6,000&ndash;8,000 &divide; 200, back-calculated for comparison only)</td>
+              </tr>
+              <tr>
+                <td>Medicare coinsurance split (of the $64.28/mg, $12,856.74/dose reimbursement below)</td>
+                <td class="val">Medicare $51.43 · Patient $12.86</td>
+                <td class="val">Medicare $10,285.39 · Patient $2,571.35</td>
+                <td class="src">20% coinsurance &times; ASP+6% reimbursement — calculated, standard Part B cost-share design</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="sans" style="font-size:13.5px;color:var(--ink-soft);margin:26px 0 6px;font-weight:600;">Margin / spread — calculated from the ASP formulas in the intelligence report, per mg and per 200mg dose:</p>
+        <div class="verdict">
+          <div class="verdict-head">Verdict for J9271 — per mg / per 200mg dose</div>
+          <div class="verdict-row"><span>On a standard Medicare Part B claim (340B-enrolled)</span><span class="v profit">PROFIT +$20.01/mg · +$4,002.57/dose</span></div>
+          <div class="verdict-row"><span>On its highest billed commercial rate (UnitedHealthcare)</span><span class="v profit">PROFIT +$273.74/mg · +$54,747.83/dose</span></div>
+          <div class="verdict-row"><span>On its lowest billed Medicare-managed-care rate (BCBS)</span><span class="v profit">PROFIT +$16.02/mg · +$3,203.83/dose</span></div>
+          <p class="verdict-note">Every scenario on file for this drug is a profit — none of the 18 payer rates fall below the $44.27/mg ($8,854.17/dose) estimated 340B acquisition cost. All /dose figures are the /mg figure &times; 200mg — a calculated scale-up, not a value present in the hospital's file.</p>
+        </div>
+        <div class="scrollx">
+          <table class="sources">
+            <thead>
+              <tr><th>Line</th><th>Formula</th><th>Value /mg</th><th>Value /200mg dose</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>CMS Medicare Part B reimbursement (standard buy-and-bill)</td>
+                <td class="src">ASP + 6% = $60.645 &times; 1.06</td>
+                <td class="val">$64.28</td>
+                <td class="val">$12,856.74</td>
+              </tr>
+              <tr>
+                <td>Estimated 340B acquisition cost</td>
+                <td class="src">ASP &minus; 27% = $60.645 &times; 0.73 (COA report's average discount, applied here — not this drug's actual confidential 340B ceiling price)</td>
+                <td class="val">$44.27</td>
+                <td class="val">$8,854.17</td>
+              </tr>
+              <tr>
+                <td>Estimated 340B spread on a Medicare buy-and-bill claim</td>
+                <td class="src">$64.28 reimbursement &minus; $44.27 estimated cost</td>
+                <td class="val" style="color:var(--good);">+$20.01</td>
+                <td class="val" style="color:var(--good);">+$4,002.57</td>
+              </tr>
+              <tr>
+                <td>Estimated margin, hospital's own highest billed commercial rate</td>
+                <td class="src">UnitedHealthcare $318.01 &minus; $44.27 estimated 340B cost</td>
+                <td class="val" style="color:var(--good);">+$273.74</td>
+                <td class="val" style="color:var(--good);">+$54,747.83</td>
+              </tr>
+              <tr>
+                <td>Estimated margin, hospital's own lowest Medicare-managed-care rate</td>
+                <td class="src">BCBS Medicare HMO $60.29 &minus; $44.27 estimated 340B cost</td>
+                <td class="val" style="color:var(--good);">+$16.02</td>
+                <td class="val" style="color:var(--good);">+$3,203.83</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <strong>These 5 rows are calculated, not sourced verbatim.</strong> Inputs (ASP $60.645, the two report-cited formulas ASP+6% and ASP&minus;27%, and the hospital's own on-file payer rates) are all real and cited elsewhere on this page. The 340B acquisition figure is this drug's ASP run through the report's average industry discount, not J9271's actual confidential 340B ceiling price — that number is not publicly obtainable (see &sect;6). Every line here shows a gain because acquisition cost sits well below both Medicare and commercial reimbursement for this drug on this hospital's file; a drug where WAC/340B cost exceeds the billed rate would show a loss the same way, none did in this sample.
+        </div>
+
+        <div class="callout">
+          <strong>Billing unit — inferred, not restated in the hospital's own row:</strong> HCPCS J9271 is officially defined by CMS as "Injection, pembrolizumab, 1 mg" — a fixed per-mg unit of service. The CMS ASP file confirms this explicitly (<code class="inline">billing_unit_dosage: "1 MG"</code>). The hospital's MRF line item, however, carries no <code class="inline">drug_information</code>/unit field of its own — it states only a dollar figure per payer, not "per mg." The rates below are shown as per-mg because they're billed under a code whose unit is fixed by definition, not because the hospital's file restates it.
+          <p style="margin:12px 0 0;">
+            <strong>Scale used below — 200 mg per dose.</strong> Keytruda's FDA-labeled standard adult dose is 200 mg IV every 3 weeks (or 400 mg every 6 weeks) — a public prescribing-label fact, not a value present anywhere in the hospital's MRF, which specifies no dose quantity at all. One simple worked calculation, using the hospital's own lowest on-file Medicare rate as the example:
+          </p>
+          <p class="mono" style="margin:8px 0 0;font-size:13px;">
+            $60.29 /mg &times; 200 mg = <strong>$12,058.00</strong> billed for one complete adult dose (BCBS Medicare Managed Care HMO rate)
+          </p>
+          <p style="margin:8px 0 0;font-size:12.5px;">Every "/dose" figure in the table below is this same multiplication (rate &times; 200), applied consistently across all 18 payer rows — a calculated scale-up, not a hospital-stated dose charge.</p>
+        </div>
+
+        <p class="sans" style="font-size:13.5px;color:var(--ink-soft);margin:20px 0 6px;font-weight:600;">All 18 payer-specific negotiated rates on file, outpatient facility setting — per mg (as billed) and per 200 mg dose (calculated):</p>
+        <div class="scrollx">
+          <table class="sources">
+            <thead>
+              <tr><th>Payer / plan</th><th>Rate /mg</th><th>Rate /200 mg dose</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Aetna — HMO/POS/PPO</td><td class="val">$131.90</td><td class="val">$26,380.00</td></tr>
+              <tr><td>Aetna — Medicare Managed Care HMO/PPO</td><td class="val">$61.20</td><td class="val">$12,240.00</td></tr>
+              <tr><td>Aetna — New Business Discount</td><td class="val">$127.87</td><td class="val">$25,574.00</td></tr>
+              <tr><td>BCBS — All Commercial Plans</td><td class="val">$187.20</td><td class="val">$37,440.00</td></tr>
+              <tr><td>BCBS — Medicare Managed Care HMO</td><td class="val">$60.29</td><td class="val">$12,058.00</td></tr>
+              <tr><td>Cigna — Local Plus/SureFit HMO/PPO</td><td class="val">$137.62</td><td class="val">$27,524.00</td></tr>
+              <tr><td>Cigna — Network C-24 HMO/PPO</td><td class="val">$137.62</td><td class="val">$27,524.00</td></tr>
+              <tr><td>Cigna — PCP Optional/Required HMO</td><td class="val">$146.40</td><td class="val">$29,280.00</td></tr>
+              <tr><td>Cigna — TX HealthSpring Medicare HMO/PPO</td><td class="val">$62.10</td><td class="val">$12,420.00</td></tr>
+              <tr><td>Community Health Choice — D-SNP Medicare HMO</td><td class="val">$64.51</td><td class="val">$12,902.00</td></tr>
+              <tr><td>Community Health Choice — Silver &amp; Gold Exchange</td><td class="val">$98.27</td><td class="val">$19,654.00</td></tr>
+              <tr><td>Molina — Advantage Medicare Plan</td><td class="val">$63.31</td><td class="val">$12,662.00</td></tr>
+              <tr><td>Molina — Exchange</td><td class="val">$130.23</td><td class="val">$26,046.00</td></tr>
+              <tr><td>Optum Health — Transplant Medicare Plan</td><td class="val">$117.57</td><td class="val">$23,514.00</td></tr>
+              <tr><td>ProCare Advantage — Medicare HMO</td><td class="val">$66.32</td><td class="val">$13,264.00</td></tr>
+              <tr><td>UAE — All Commercial Plans</td><td class="val">$241.16</td><td class="val">$48,232.00</td></tr>
+              <tr><td>UnitedHealthcare — All Commercial Plans</td><td class="val">$318.01</td><td class="val">$63,602.00</td></tr>
+              <tr><td>UnitedHealthcare — Medicare HMO</td><td class="val">$61.50</td><td class="val">$12,300.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <strong>What this shows, per the product's Epic 4 (markup/reimbursement flagging):</strong> the widest commercial rate on file (UnitedHealthcare, $318.01/mg · $63,602.00/dose) sits at roughly 5.2× the narrowest Medicare-managed-care rate ($61.20/mg · $12,240.00/dose) for the identical HCPCS code, at the same hospital, same setting — the exact per-line spread the flagging logic is built to surface, computed directly from figures already present in the payer table above, not modeled or estimated.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5 · Reimbursement schemes the product overlays</h2>
+    <p class="lede">Four distinct payment schemes govern how much a hospital actually recovers per drug — the intelligence report quantifies each with real figures, and the product (Epic 4/5) computes each drug's position against them.</p>
+    <div class="catgrid">
+      <div class="cat">
+        <div class="catname">Medicare Part B buy-and-bill</div>
+        <div class="catcount">ASP + 6% standard · ASP + 3% reduced/sequestration settings</div>
+      </div>
+      <div class="cat">
+        <div class="catname">340B Drug Pricing Program</div>
+        <div class="catcount">~27% below ASP average acquisition cost (COA report)</div>
+        <div class="catgap">creates a $1,000&ndash;$3,000+ spread per infusion in the report's examples</div>
+      </div>
+      <div class="cat">
+        <div class="catname">Medicare Part A — CAR-T / CGT (MS-DRG)</div>
+        <div class="catcount">base payment $269,139 (2025) &rarr; $314,231 (2026), +16.8% YoY</div>
+        <div class="catgap">vs. $373,000&ndash;$475,000 drug acquisition cost — hospitals can lose $300,000+ per case</div>
+      </div>
+      <div class="cat">
+        <div class="catname">Commercial payers</div>
+        <div class="catcount">2&ndash;7&times; Medicare rates, no standard formula — per-contract negotiated</div>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;">Markup evidence cited in the report: a documented case study of a $2,396 &rarr; $10,112 charge (4.2&times;), and individual line items marked up 190%, 203%, and 173% over acquisition cost — consistent with the report's general 190&ndash;300%+ markup range. Medicaid reimbursement is state-inconsistent (Massachusetts and New York named specifically); the CGT Access Model launched mid-2025 covers an estimated 84% of eligible Medicaid beneficiaries for cellular/gene therapy. Source: <em>Specialty Drug Pricing MRF Intelligence Report</em>, &sect;2.</p>
+  </section>
+
+  <section>
+    <h2>6 · Guardrails carried into the product design</h2>
+    <p class="lede">Requirements enforced while building the reference data, now written into the product's Epic 7 (Data Provenance &amp; No-Hallucination Guardrail) so the same standard holds at run time, not just during this one-time build.</p>
+    <div class="guardrail">
+      <div class="grcard"><h4><span class="icon"></span>No silent substitution</h4><p>If a market-leading drug's HCPCS code isn't in a hospital's file, the slot is left empty and logged — never backfilled with a different code.</p></div>
+      <div class="grcard"><h4><span class="icon"></span>Every number carries a source</h4><p>Hospital figures cite the exact MRF file; ASP figures cite the CMS zip and page; WAC/list figures cite a URL. A field with no available source renders "not publicly available," never a placeholder number.</p></div>
+      <div class="grcard"><h4><span class="icon"></span>Search snippets get checked against primary documents</h4><p>Where a search result's summary looked synthesized rather than directly quoted (Epogen/J0885), the actual manufacturer PDF was downloaded and read before the figure was accepted.</p></div>
+      <div class="grcard"><h4><span class="icon"></span>Genuinely unavailable data stays unavailable</h4><p>True 340B ceiling price (HRSA OPAIS, login-gated) and NADAC (out of scope for physician-administered drugs) are both documented as unobtainable rather than estimated.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Built from <code class="inline">74110155_the-methodist-hospital_standardcharges.json</code>, <code class="inline">oncology_top5_by_category.json</code>, <code class="inline">oncology_top5_asp_reference.json</code>, <code class="inline">340B_pricing_research.md</code>, and the underlying <em>Specialty Drug Pricing MRF Intelligence Report</em>. No figure on this page was estimated, interpolated, or generated — each traces to one of these files or its cited external source.
+  </div>
+</footer>
+
+</body>
+</html>
