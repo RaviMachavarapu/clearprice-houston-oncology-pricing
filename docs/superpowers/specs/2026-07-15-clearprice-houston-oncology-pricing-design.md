@@ -86,8 +86,10 @@ Per hospital, in order:
      hospital may still have parsed fine)
 
 Output: one normalized dataset per hospital, same shape as the existing
-Methodist Hospital file, stored under a `houston_hospitals/` data directory (git
-ignored — large source files stay on disk, not in the repo).
+Methodist Hospital file, written to `houston_hospitals/` — which is the mount
+path of the Docker data volume described in §7, not a separate location. That
+volume (git-ignored; large source files never enter the repo) is the single
+place this data lives.
 
 ## 4. 340B enrollment verification ("verify twice" requirement)
 
@@ -119,7 +121,7 @@ Runs per (selected drug × hospital), reproducing exactly the structure in
 | ASP−27% (est. 340B acquisition cost) — **only if hospital verified 340B-enrolled** | calculated: ASP × 0.73 | formula shown inline, labeled "industry-average discount (COA report), not this hospital's actual ceiling price" |
 | 340B spread | calculated: reimbursement − est. acquisition cost | formula shown inline |
 | WAC/list benchmark | `340B_pricing_research.md` | per-drug citation link already in that file |
-| Markup ratio | calculated: gross_charge ÷ ASP | flagged if > 3x (per BA doc Epic 4 threshold) |
+| Markup ratio | calculated per individual payer rate: that payer's rate ÷ ASP (not computed on the aggregate min–max range) | flagged if > 3x (per BA doc Epic 4 threshold) |
 | CGT reimbursement risk (Q2041/Q2042/Q2055/Q2054/Q2056 only) | DRG payment ($269,139 / $314,231) vs. list-price acquisition cost | red flag if hospital's negotiated/DRG reimbursement is below list-price benchmark |
 
 Every rendered number carries a visible source tag (file name+date, or a link)
