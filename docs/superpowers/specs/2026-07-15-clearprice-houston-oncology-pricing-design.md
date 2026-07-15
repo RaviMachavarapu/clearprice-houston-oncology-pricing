@@ -152,36 +152,46 @@ record against the raw source file).
 
 No hospital's results ever include a payer scheme it did not itself publish.
 
-### 5.2 Adult dose scale (per drug, sourced, never assumed)
+### 5.2 Adult dose scale (per drug, sourced, never assumed, never copied across drugs)
 
 §4's "/dose" figures (e.g. "$60.29/mg × 200 mg = $12,058.00 billed") are a
 calculated scale-up of the hospital's own per-mg/per-unit rate — the hospital's
 MRF never states a dose quantity itself (confirmed: `oncology_top5_by_category.json`
-stores only per-mg/per-unit rates, no dose field, for all 33 drugs). The dose
-scale must come from the drug's FDA prescribing label, per drug, cited — the
-same treatment §4 already gives pembrolizumab (200 mg, FDA label, disclosed as
-"Scale used below," not stated in any hospital's file).
+stores only per-mg/per-unit rates, no dose field, for all 33 drugs). §4's 200 mg
+Keytruda figure is **specific to Keytruda's own FDA label** and must not be
+reused, copied, or pattern-matched onto any other drug. Every one of the 33
+drugs gets its own independent FDA-label lookup and its own dose figure — no
+shared or default scale.
 
-Two dosing patterns exist across the 33 drugs and must be handled differently:
+Rule per drug: use that drug's own FDA prescribing label, standard/most common
+adult oncology regimen, at approximate normal-weighted-adult usage (i.e. the
+regimen as an average/typical adult patient would receive it — not a
+pediatric, renal-adjusted, or dose-reduced variant). Three dosing patterns
+appear across the 33 drugs, each handled per that drug's own label:
 
-- **Fixed adult dose (e.g. pembrolizumab 200 mg IV q3w or 400 mg IV q6w):** use
-  the FDA label's standard adult regimen directly, cited to the label. Same
-  treatment as §4.
-- **Weight/BSA-based dose (e.g. Paclitaxel J9267, dosed mg/m² per label; likely
-  others — carboplatin-type AUC dosing, mg/kg drugs):** there is no single fixed
-  adult dose without assuming a body size. Per your direction, follow §4's own
-  approach: use the FDA label's standard/typical adult regimen (e.g. "175 mg/m²
-  IV over 3 hours, per label"), then apply the standard pharmacology reference
-  body-surface-area convention (1.7 m², the commonly cited average-adult BSA
-  used in clinical dosing references) to produce an illustrative "/dose" figure —
-  **explicitly labeled** "illustrative reference dose (label regimen × 1.7 m²
-  reference BSA) — not this hospital's actual patient dose," exactly as §4
-  discloses its own 200 mg scale rather than presenting it as hospital-stated.
-- Every dose-scale value, fixed or reference-BSA, carries its own source
-  citation (FDA label link + access date) directly next to it, same as every
-  other number in this app.
-- This sourcing must be done per drug, individually, for all 33 — not inferred
-  from one drug's label pattern to another.
+- **Fixed dose (e.g. pembrolizumab 200 mg IV q3w per its label):** use that
+  exact label figure, cited to that drug's label.
+- **Weight-based, mg/kg (e.g. some monoclonal antibodies per their own
+  labels):** use that drug's own label mg/kg figure × a disclosed reference
+  adult body weight (70 kg — the standard reference weight used in clinical
+  pharmacology dosing, not invented), cited to that drug's label + the 70 kg
+  reference convention.
+- **Body-surface-area, mg/m² (e.g. Paclitaxel J9267, per its own label; likely
+  others — carboplatin-type/AUC dosing):** use that drug's own label mg/m²
+  figure × a disclosed reference adult BSA (1.7 m², the standard reference BSA
+  used in clinical pharmacology dosing, not invented), cited to that drug's
+  label + the 1.7 m² reference convention.
+
+For the weight- and BSA-based cases, the resulting "/dose" figure is
+**explicitly labeled** "illustrative reference dose (this drug's own label
+regimen × reference adult weight/BSA) — not this hospital's actual patient
+dose," the same disclosure §4 already gives its own 200 mg scale-up rather than
+presenting it as hospital-stated fact.
+
+Every dose-scale value carries its own source citation (that specific drug's
+FDA label link + access date) directly next to it, same as every other number
+in this app. This is 33 individual label lookups — one per drug — never
+inferred or defaulted from another drug's regimen.
 
 ## 6. UI
 
