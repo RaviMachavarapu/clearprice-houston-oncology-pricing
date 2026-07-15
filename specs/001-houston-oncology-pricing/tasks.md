@@ -82,7 +82,7 @@ Web application layout per plan.md: `backend/src/`, `backend/tests/`, `frontend/
 ### Implementation for User Story 2
 
 - [ ] T026 [P] [US2] Implement ASP+6% and ASP−27% formula functions in `backend/src/calc/reimbursement.py` (depends on T006)
-- [ ] T027 [P] [US2] Implement markup-ratio calculation (`payer_rate / asp_value`, per-payer not aggregate) in `backend/src/calc/markup.py`
+- [ ] T027 [P] [US2] Implement markup-ratio calculation (`payer_rate / asp_value`, per-payer not aggregate) plus the FR-005 `markup_ratio_flag` (true when ratio > 3) in `backend/src/calc/markup.py`, carrying each payer row's `billing_setting` through from the Charge Record untouched
 - [ ] T028 [P] [US2] Implement dose-line assembly (fixed / mg_per_kg × 70kg / mg_per_m2 × 1.7m², with `dose_regimen_cited`) in `backend/src/calc/dose.py` (depends on T006)
 - [ ] T029 [P] [US2] Implement CGT DRG-risk flag comparison (Q2041/Q2042/Q2055/Q2054/Q2056 vs. $269,139/$314,231) in `backend/src/calc/cgt_risk.py`
 - [ ] T030 [US2] Implement full Pricing Breakdown assembler in `backend/src/calc/breakdown.py`: combine Charge Record + Drug reference + Hospital 340B status + T026-T029, call `assert_provenance` (T015) on every field, omit `asp_minus27_line` unless `enrolled` (depends on T013, T015, T026, T027, T028, T029)

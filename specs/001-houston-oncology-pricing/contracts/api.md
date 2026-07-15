@@ -61,7 +61,7 @@ unavailable status entries (per FR-003), not silently omitted.
       "wac_line": {"value": 0, "source": "string", "access_date": "date"},
       "dose_line": {"value": 0, "unit": "mg | mg/kg | mg/m2", "regimen_cited": "string", "source": "string", "access_date": "date"},
       "payer_table": [
-        {"payer_name": "string", "plan_name": "string", "rate": 0, "markup_ratio": 0, "source_file": "string", "retrieved_at": "ISO8601"}
+        {"payer_name": "string", "plan_name": "string", "billing_setting": "string", "rate": 0, "markup_ratio": 0, "markup_ratio_flag": false, "source_file": "string", "retrieved_at": "ISO8601"}
       ],
       "cgt_risk_flag": true
     }

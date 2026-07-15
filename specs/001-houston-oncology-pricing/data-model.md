@@ -59,15 +59,19 @@ Written only by ingestion, read-only afterward (Principle V).
 | `gross_charge_max` | number | nullable |
 | `source_file` | string | Original MRF file name |
 | `retrieved_at` | datetime | Ingestion timestamp |
-| `payer_rates` | array | Each: `{payer_name, plan_name, rate, verification_checks: [check1, check2], verified}` |
+| `payer_rates` | array | Each: `{payer_name, plan_name, billing_setting, rate, verification_checks: [check1, check2], verified}` |
 
 **Validation rules**: A `payer_rates` entry's `verified` is true only if both
 `verification_checks` entries independently confirm the scheme's presence in
 that hospital's own raw MRF file; otherwise `verified: false` and the entry
 is excluded from any rendered calculation (Principle II). No `payer_rates`
 entry may be copied from another hospital's Charge Record (Principle III).
-A hospital/drug combination with no Charge Record at all means "not
-published" (FR-002) — not the same as `ingestion_status: failed`.
+`billing_setting` (e.g. inpatient/outpatient, professional/institutional) is
+read directly from the hospital's own MRF row alongside `rate` — a quoted
+field, not calculated, so it only needs the same `source_file`/`retrieved_at`
+citation as `rate`, no formula. A hospital/drug combination with no Charge
+Record at all means "not published" (FR-002) — not the same as
+`ingestion_status: failed`.
 
 ## Pricing Breakdown
 
@@ -84,7 +88,7 @@ and Charge Record so it can never drift from its sources (Principle V).
 | `asp_minus27_line` | {value, formula, source} \| omitted | Present only if `Hospital.enrollment_340b == enrolled`; `formula = "ASP - 27% (industry-standard 340B estimate)"`, `source` = `340B_pricing_research.md` citation |
 | `wac_line` | {value, source} | From Drug.wac_value/wac_source |
 | `dose_line` | {value, unit, regimen_cited, source} | From Drug dose fields; explicitly labeled illustrative reference dose (70kg / 1.7m² reference), never a hospital-specific actual dose |
-| `payer_table` | array | Verified `payer_rates` entries only, each with `markup_ratio = rate / asp_value` and its own source citation |
+| `payer_table` | array | Verified `payer_rates` entries only, each with `billing_setting`, `markup_ratio = rate / asp_value`, `markup_ratio_flag` (`formula = "markup_ratio > 3"`, boolean, per FR-005), and its own source citation |
 | `cgt_risk_flag` | boolean \| omitted | Present only for CGT-category drugs (Q2041/Q2042/Q2055/Q2054/Q2056), comparing against $269,139 / $314,231 DRG payment reference |
 
 **Validation rules**: Every leaf value carries a citation object
