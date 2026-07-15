@@ -127,6 +127,31 @@ matching the citation style already in `340B_pricing_research.md` and the HTML's
 `<span class="src">` treatment. No field renders blank-but-implied-zero; codes
 with no available benchmark show "not publicly available."
 
+### 5.1 Payer-scheme verification (mandatory, twice, before any per-payer calc)
+
+§4's worked example lists 18 named payer/plan rows for one drug at one hospital
+(Aetna – HMO/POS/PPO, Aetna – Medicare Managed Care HMO/PPO, Aetna – New Business
+Discount, BCBS – All Commercial Plans, BCBS – Medicare Managed Care HMO, Cigna –
+Local Plus/SureFit HMO/PPO, Cigna – Network C-24 HMO/PPO, Cigna – PCP
+Optional/Required HMO, Cigna – TX HealthSpring Medicare HMO/PPO, Community Health
+Choice – D-SNP Medicare HMO, Community Health Choice – Silver & Gold Exchange,
+Molina – Advantage Medicare Plan, Molina – Exchange, and others in that hospital's
+own file). These "schemes" are payer/plan rows the hospital chose to publish in
+its own MRF `payers_information` array — they are hospital-specific, not
+universal.
+
+Rule: before computing any per-payer margin/verdict line for a given
+hospital+drug, check **twice** whether that specific payer/plan scheme is present
+in that hospital's own normalized MRF extract (independent re-check of the parsed
+record against the raw source file).
+- Present in both checks → include that payer's rate in the calculation.
+- Absent in both checks → do not include it; do not substitute another
+  hospital's rate or a category average for it.
+- Disagreement between the two checks → mark that payer row `unverified` for
+  this hospital, exclude from calculation, and log the discrepancy.
+
+No hospital's results ever include a payer scheme it did not itself publish.
+
 ## 6. UI
 
 - **Drug picker:** all 33 drugs as checkboxes, grouped under their 7 categories
@@ -149,9 +174,15 @@ with no available benchmark show "not publicly available."
   consistent with the user's existing Python/Anaconda environment.
 - **Frontend:** plain HTML/JS (no build step), styled to match the existing
   methodology HTML. No framework needed for a checkbox-driven, single-page tool.
-- **Data storage:** normalized per-hospital JSON files on disk (not a database —
-  44 hospitals × 33 drugs is small, file-based is simplest and keeps every
-  record traceable to its source file).
+- **Data storage:** normalized per-hospital JSON files, one per hospital, stored
+  inside a Docker container (dedicated data volume/container — e.g.
+  `clearprice-data`). The ingestion pipeline writes all 44 hospitals' normalized
+  MRF extracts into that container's volume; it is the single source of truth.
+  Both the FastAPI backend and the frontend read exclusively from that
+  container's data (via the backend, which mounts the volume) — no results are
+  computed from files elsewhere on disk once ingestion has run. Rationale: one
+  place to inspect/audit what data the app is actually using, and portable to
+  redeploy elsewhere later (Phase 2, other metros).
 
 ## 8. Out of scope for v1 (stated, not hidden)
 
