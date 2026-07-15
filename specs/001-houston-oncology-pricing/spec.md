@@ -153,8 +153,11 @@ included with a guessed value.
   Houston-area hospitals (from the locked 44-hospital scope) that publish a
   charge for that drug in their own ingested MRF data.
 - **FR-003**: The system MUST show a hospital as data-unavailable for a given
-  drug (rather than omitting it) when that hospital's MRF could not be
-  ingested or does not publish that specific drug.
+  drug (rather than silently omitting it from the roster) specifically when
+  that hospital's MRF could not be ingested (broken link, unparseable file).
+  A hospital that was successfully ingested but genuinely does not publish a
+  given drug is not shown for that drug at all (per FR-002) — this is a normal
+  absence, not an unavailable/failure status.
 - **FR-004**: For every selected drug, the system MUST render one full
   pricing/reimbursement breakdown per hospital that publishes it — not a
   single representative example applied to all hospitals.
