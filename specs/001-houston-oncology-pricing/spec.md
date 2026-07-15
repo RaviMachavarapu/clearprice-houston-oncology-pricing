@@ -18,6 +18,13 @@ twice per hospital before being used in any calculation." Full detail already
 worked out and approved in
 `docs/superpowers/specs/2026-07-15-clearprice-houston-oncology-pricing-design.md`.
 
+## Clarifications
+
+### Session 2026-07-15
+
+- Q: Is this a single-user local tool or does it need login/access control for multiple people? → A: Single-user, no login — runs locally for the user's own research/analysis use.
+- Q: How often should ingested hospital MRF data and 340B enrollment status be refreshed once the app is running? → A: Manual re-run only — data refreshes only when the user deliberately re-runs ingestion; no automatic background schedule.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Select drugs, see which Houston hospitals publish them (Priority: P1)
@@ -249,3 +256,10 @@ included with a guessed value.
 - This feature does not involve patient-identifiable data of any kind; all
   data is hospital-published price transparency data, public regulatory
   benchmarks, and public drug labeling.
+- This is a single-user local tool with no login or access control — it is not
+  built for multiple concurrent users or hosted multi-tenant access.
+- Ingested hospital MRF data and 340B enrollment status refresh only when the
+  user deliberately re-runs ingestion; there is no automatic background
+  refresh schedule. Data shown at any time reflects the state as of its last
+  manual ingestion run, and the app surfaces when that was (per FR-012's
+  retrieval-date citation) rather than implying it is always current.
