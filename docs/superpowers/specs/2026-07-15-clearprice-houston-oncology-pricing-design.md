@@ -152,6 +152,37 @@ record against the raw source file).
 
 No hospital's results ever include a payer scheme it did not itself publish.
 
+### 5.2 Adult dose scale (per drug, sourced, never assumed)
+
+§4's "/dose" figures (e.g. "$60.29/mg × 200 mg = $12,058.00 billed") are a
+calculated scale-up of the hospital's own per-mg/per-unit rate — the hospital's
+MRF never states a dose quantity itself (confirmed: `oncology_top5_by_category.json`
+stores only per-mg/per-unit rates, no dose field, for all 33 drugs). The dose
+scale must come from the drug's FDA prescribing label, per drug, cited — the
+same treatment §4 already gives pembrolizumab (200 mg, FDA label, disclosed as
+"Scale used below," not stated in any hospital's file).
+
+Two dosing patterns exist across the 33 drugs and must be handled differently:
+
+- **Fixed adult dose (e.g. pembrolizumab 200 mg IV q3w or 400 mg IV q6w):** use
+  the FDA label's standard adult regimen directly, cited to the label. Same
+  treatment as §4.
+- **Weight/BSA-based dose (e.g. Paclitaxel J9267, dosed mg/m² per label; likely
+  others — carboplatin-type AUC dosing, mg/kg drugs):** there is no single fixed
+  adult dose without assuming a body size. Per your direction, follow §4's own
+  approach: use the FDA label's standard/typical adult regimen (e.g. "175 mg/m²
+  IV over 3 hours, per label"), then apply the standard pharmacology reference
+  body-surface-area convention (1.7 m², the commonly cited average-adult BSA
+  used in clinical dosing references) to produce an illustrative "/dose" figure —
+  **explicitly labeled** "illustrative reference dose (label regimen × 1.7 m²
+  reference BSA) — not this hospital's actual patient dose," exactly as §4
+  discloses its own 200 mg scale rather than presenting it as hospital-stated.
+- Every dose-scale value, fixed or reference-BSA, carries its own source
+  citation (FDA label link + access date) directly next to it, same as every
+  other number in this app.
+- This sourcing must be done per drug, individually, for all 33 — not inferred
+  from one drug's label pattern to another.
+
 ## 6. UI
 
 - **Drug picker:** all 33 drugs as checkboxes, grouped under their 7 categories
@@ -161,12 +192,20 @@ No hospital's results ever include a payer scheme it did not itself publish.
 - **Results view:** on selection, list only hospitals (of the 44) that publish at
   least one selected drug. Hospitals with a failed ingestion for a given drug show
   "MRF unavailable" for that cell instead of being silently dropped from the list.
-- **Detail view:** clicking a drug/hospital pair opens the full Section-4-style
-  breakdown — readout cards, sources table, verdict block (profit/loss per
-  scenario), margin-formula table, all-payer rate table — computed live from
-  ingested data, not hardcoded to the Keytruda example.
+- **Detail view — one full §4-style breakdown per hospital, per selected drug:**
+  for every drug the user checks, the app renders the complete Section-4-style
+  breakdown (readout cards, sources table, verdict block, margin-formula table,
+  all-payer rate table, dose-scale disclosure per §5.2) for **every hospital (of
+  the 44) that publishes that drug in its own MRF** — not one example hospital
+  per drug. If the user selects N drugs, and a given drug is published by M of
+  the 44 hospitals, that drug gets M full breakdowns, one per hospital. Computed
+  live from ingested data, never hardcoded to the Keytruda example.
 - **Visual style:** reuse the existing `ClearPrice_Build_Methodology.html`
   look (same CSS variables/typography) for continuity.
+- **Rendering scale:** selecting many drugs (up to all 33) across 44 hospitals
+  can produce hundreds of full breakdowns in one view. Results are grouped by
+  drug first, then by hospital within that drug, and rendered/loaded
+  incrementally (not all at once) rather than a single giant unpaginated page.
 
 ## 7. Tech stack
 
@@ -201,3 +240,33 @@ Houston oncology providers — do **not** appear anywhere in
 are excluded from v1 not because they were reviewed and rejected, but because no
 MRF link for them exists in the source file at all. Flagged here rather than
 silently omitted.
+
+## 10. Fresh-eyes review — risks flagged before implementation
+
+- **Per-drug label verification is 33 separate lookups, not one pattern.**
+  Confirming fixed-dose vs. weight/BSA-based, and the exact cited regimen, has
+  to be done individually per drug against its FDA label. Cannot infer drug #2's
+  dosing pattern from drug #1's — different drugs, different labels, different
+  regimens (and some drugs have multiple FDA-approved regimens/indications;
+  where that's true, the specific regimen/indication cited must be stated next
+  to the number, not left ambiguous).
+- **Reference-BSA figures are still an illustrative construct, not this
+  hospital's real patient dose** — disclosed per §5.2, but worth restating: any
+  "per dose" dollar figure for a weight/BSA-based drug is a labeled reference
+  calculation, never presented as fact the hospital charges per full course.
+- **Combinatorial rendering load.** 33 drugs × 44 hospitals is up to 1,452
+  possible full breakdowns if every drug were published everywhere (in practice
+  fewer, since not every hospital publishes every code) — confirmed the design
+  already requires incremental/grouped rendering (§6) rather than one flat page.
+- **Ingestion is the long pole, not the UI.** 43 of the 44 hospitals' MRFs are
+  still unparsed (only Houston Methodist Hospital's file is processed today).
+  Formats vary (json/csv/zip/SAS-token URLs, §2) — some will likely fail to
+  parse cleanly on the first pass and need per-hospital debugging, per §3's
+  explicit `ingestion failed: <reason>` handling (never papered over).
+- **340B enrollment lookup is a live external dependency** (HRSA OPAIS public
+  search, §4) — if that site's structure changes or a hospital's registered
+  name doesn't match cleanly, the double-check can legitimately land on
+  `unverified` for some hospitals; that's the correct outcome per the spec, not
+  a bug to work around by guessing.
+- **No blocking unknowns found beyond the above** — all are execution-effort
+  and disclosure items, not open design questions.
