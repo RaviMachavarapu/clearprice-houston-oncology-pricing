@@ -1,16 +1,23 @@
 <!--
 Sync Impact Report
-Version change: [TEMPLATE] → 1.0.0
-Modified principles: n/a (initial ratification, template placeholders filled)
-Added sections: all (Core Principles I-V, Additional Constraints, Development
-  Workflow & Fresh-Eyes Review, Governance)
+Version change: 1.0.0 → 1.1.0
+Modified principles:
+  III. Per-Drug, Per-Hospital Sourcing — No Cross-Inference: added requirement
+     to state which specific regimen/indication was cited when a drug's FDA
+     label has more than one approved option.
+Added sections:
+  VI. Automated Provenance Enforcement (NON-NEGOTIABLE) — fresh-eyes review
+     found Principles I-IV were documentation-only commitments with no
+     mechanism forcing compliance; this principle requires automated
+     rejection of any unsourced record before it reaches the Docker volume
+     or UI.
 Removed sections: none
 Templates requiring updates:
   ✅ .specify/templates/plan-template.md — Constitution Check section will
-     reference these 5 principles (verify on next /speckit.plan run)
+     reference all 6 principles (verify on next /speckit.plan run)
   ✅ .specify/templates/spec-template.md — no conflicting mandatory sections
-  ✅ .specify/templates/tasks-template.md — task categorization compatible
-     (data-sourcing and verification tasks fit existing task types)
+  ✅ .specify/templates/tasks-template.md — task categorization compatible;
+     automated-check tasks (Principle VI) fit existing "testing" task type
   ✅ speckit command/skill files — no CLAUDE-only references found requiring
      change
 Follow-up TODOs: none — all placeholders resolved from the approved design
@@ -49,7 +56,10 @@ from another drug's label or from a prior worked example (e.g. one drug's
 fixed-dose regimen MUST NOT be reused as a template for a different drug).
 Likewise, every one of the hospitals in scope is sourced independently from
 its own MRF file — no hospital's rate, scheme list, or charge is borrowed from
-another hospital's file, a system-wide average, or a "typical" figure.
+another hospital's file, a system-wide average, or a "typical" figure. Where a
+drug's FDA label carries more than one approved regimen or indication, the
+specific regimen/indication used MUST be stated next to the figure — never
+left ambiguous as to which one was cited.
 
 ### IV. Full Provenance on Every Rendered Number
 Every dollar figure, dose figure, or ratio shown in the UI carries a visible
@@ -69,6 +79,17 @@ data path, cache, or local file copy is treated as authoritative. If the
 volume's data is stale or a hospital's ingestion failed, that is surfaced to
 the user as a status (`ingestion failed: <reason>`), not silently bypassed
 with data from elsewhere.
+
+### VI. Automated Provenance Enforcement (NON-NEGOTIABLE)
+Compliance with Principles I–IV MUST NOT depend on manual diligence alone.
+The ingestion pipeline and calculation engine MUST include automated checks
+that reject a record before it reaches the Docker volume (Principle V) or the
+UI if it lacks a required field: a source file name + retrieval date (for
+hospital-MRF-derived data), a source link + access date (for FDA labels, CMS
+ASP entries, HRSA 340B lookups, WAC/list citations), or an inline formula (for
+any calculated value). These checks are part of the implementation's test
+suite — run on every ingestion and every calculation — not a documentation-only
+expectation to be checked by eye after the fact.
 
 ## Additional Constraints
 
@@ -100,10 +121,11 @@ This project is built through the Spec Kit pipeline (`/speckit constitution` →
 Before moving from one completed stage's artifact to the next stage, a
 fresh-eyes review of that artifact is required: an explicit check for
 placeholders, internal contradictions, ambiguity, and — specific to this
-project — any point where Principle I, II, or III could be silently violated
-(an assumed number, an unverified scheme, a cross-drug/cross-hospital
-inference). Findings are fixed before proceeding; the review and its outcome
-are reported to the project owner before the next stage begins.
+project — any point where Principle I, II, III, or VI could be silently
+violated (an assumed number, an unverified scheme, a cross-drug/cross-hospital
+inference, or a provenance requirement stated but not actually enforced by an
+automated check). Findings are fixed before proceeding; the review and its
+outcome are reported to the project owner before the next stage begins.
 
 ## Governance
 
@@ -118,4 +140,4 @@ or clarification only. All Spec Kit artifacts produced downstream (spec,
 plan, tasks, implementation) are reviewed for compliance with these
 principles at each stage's fresh-eyes review.
 
-**Version**: 1.0.0 | **Ratified**: 2026-07-15 | **Last Amended**: 2026-07-15
+**Version**: 1.1.0 | **Ratified**: 2026-07-15 | **Last Amended**: 2026-07-15
