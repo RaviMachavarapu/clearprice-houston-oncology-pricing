@@ -17,15 +17,20 @@ plus per-drug FDA label / CMS ASP / WAC research).
 | `dose_value` | number | Label-sourced dose rate (mg for fixed; mg/kg or mg/m² rate otherwise) |
 | `dose_regimen_cited` | string | Exact regimen/indication cited, required when label has >1 approved option (Principle III) |
 | `dose_source` | citation | FDA label link + access date |
-| `asp_value` | number | CMS ASP payment-limit figure |
-| `asp_source` | citation | CMS ASP file name/link + effective quarter + access date |
-| `wac_value` | number | WAC/list benchmark |
-| `wac_source` | citation | Source link + access date |
+| `asp_value` | number \| null | CMS ASP payment-limit figure; null if not publicly available |
+| `asp_source` | citation \| `{available: false, reason}` | CMS ASP file name/link + effective quarter + access date, or an explicit not-available marker |
+| `wac_value` | number \| null | WAC/list benchmark; null if not publicly available |
+| `wac_source` | citation \| `{available: false, reason}` | Source link + access date, or an explicit not-available marker |
 
-**Validation rules**: `dose_source`, `asp_source`, `wac_source` are
-mandatory non-null citation objects (Principle VI rejects the record
-otherwise). `dose_regimen_cited` mandatory when the drug's label defines more
-than one approved regimen/indication (Principle III).
+**Validation rules**: `dose_source` is always a mandatory non-null citation
+(dose is core to the feature, always sourced per Principle III). `asp_source`
+and `wac_source` are each mandatory but MAY resolve to the explicit
+`{available: false, reason: "not publicly available"}` marker instead of a
+citation when that benchmark genuinely isn't published anywhere (per Edge
+Cases) — a bare missing field with no marker is what Principle VI rejects,
+not the presence of the not-available state. `dose_regimen_cited` mandatory
+when the drug's label defines more than one approved regimen/indication
+(Principle III).
 
 ## Hospital
 
@@ -83,10 +88,10 @@ and Charge Record so it can never drift from its sources (Principle V).
 |---|---|---|
 | `drug_code` / `hospital_id` | string | Identify the pair |
 | `gross_charge_range` | {min, max} | From Charge Record, with `source_file` + `retrieved_at` citation |
-| `asp_line` | {value, source} | From Drug.asp_value/asp_source |
-| `asp_plus6_line` | {value, formula, source} | `formula = "ASP + 6%"`, `source` = same as `asp_source` |
-| `asp_minus27_line` | {value, formula, source} \| omitted | Present only if `Hospital.enrollment_340b == enrolled`; `formula = "ASP - 27% (industry-standard 340B estimate)"`, `source` = `340B_pricing_research.md` citation |
-| `wac_line` | {value, source} | From Drug.wac_value/wac_source |
+| `asp_line` | {value, source} \| {available: false, reason} | From Drug.asp_value/asp_source; renders "not publicly available" when not available |
+| `asp_plus6_line` | {value, formula, source} \| omitted | Omitted (not zero/blank) when `asp_line` is not available, since the formula has nothing to compute from |
+| `asp_minus27_line` | {value, formula, source} \| omitted | Present only if `Hospital.enrollment_340b == enrolled` AND `asp_line` is available; `formula = "ASP - 27% (industry-standard 340B estimate)"`, `source` = `340B_pricing_research.md` citation |
+| `wac_line` | {value, source} \| {available: false, reason} | From Drug.wac_value/wac_source; renders "not publicly available" when not available |
 | `dose_line` | {value, unit, regimen_cited, source} | From Drug dose fields; explicitly labeled illustrative reference dose (70kg / 1.7m² reference), never a hospital-specific actual dose |
 | `payer_table` | array | Verified `payer_rates` entries only, each with `billing_setting`, `markup_ratio = rate / asp_value`, `markup_ratio_flag` (`formula = "markup_ratio > 3"`, boolean, per FR-005), and its own source citation |
 | `cgt_risk_flag` | boolean \| omitted | Present only for CGT-category drugs (Q2041/Q2042/Q2055/Q2054/Q2056), comparing against $269,139 / $314,231 DRG payment reference |

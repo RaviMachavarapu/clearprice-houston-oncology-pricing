@@ -59,6 +59,7 @@ unavailable status entries (per FR-003), not silently omitted.
       "asp_plus6_line": {"value": 0, "formula": "ASP + 6%", "source": "string", "access_date": "date"},
       "asp_minus27_line": {"value": 0, "formula": "ASP - 27% (industry-standard 340B estimate)", "source": "string", "access_date": "date"},
       "wac_line": {"value": 0, "source": "string", "access_date": "date"},
+      "_comment_not_available_form": "asp_line/wac_line render as {\"available\": false, \"reason\": \"not publicly available\"} instead of the shape above when that benchmark isn't published anywhere (per spec Edge Cases); asp_plus6_line/asp_minus27_line are omitted entirely (not zero) whenever asp_line is unavailable",
       "dose_line": {"value": 0, "unit": "mg | mg/kg | mg/m2", "regimen_cited": "string", "source": "string", "access_date": "date"},
       "payer_table": [
         {"payer_name": "string", "plan_name": "string", "billing_setting": "string", "rate": 0, "markup_ratio": 0, "markup_ratio_flag": false, "source_file": "string", "retrieved_at": "ISO8601"}

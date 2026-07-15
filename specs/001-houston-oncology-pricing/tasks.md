@@ -44,7 +44,7 @@ Web application layout per plan.md: `backend/src/`, `backend/tests/`, `frontend/
 - [ ] T012 Implement `backend/src/ingestion/run_all.py` looping T011 over all 44 hospitals (manual invocation only, per spec Clarifications — no scheduler)
 - [ ] T013 Implement 340B double-check module in `backend/src/verification/enrollment_340b.py`: two independent HRSA OPAIS public-search queries per hospital, agreement required for `enrolled`/`not_enrolled`, else `unverified` (Constitution Principle II)
 - [ ] T014 Implement payer-scheme double-check module in `backend/src/verification/payer_scheme.py`: two independent passes over a hospital's raw MRF confirming each named payer/plan row before it is marked `verified` (Constitution Principle II)
-- [ ] T015 Implement Constitution Principle VI contract-test layer in `backend/src/verification/provenance_gate.py`: a function `assert_provenance(record)` that raises if any required citation/formula field is missing, called by ingestion (T011) before any write to `houston_hospitals/` and by the calc engine (Phase 4) before any breakdown is returned
+- [ ] T015 Implement Constitution Principle VI contract-test layer in `backend/src/verification/provenance_gate.py`: a function `assert_provenance(record)` that raises if any required field is missing both a citation AND an explicit `{available: false, reason}` not-available marker (per spec Edge Cases — a genuinely unpublished ASP/WAC benchmark renders "not publicly available", it is not grounds to reject the whole record), and always raises if a calculated field is missing its `formula`; called by ingestion (T011) before any write to `houston_hospitals/` and by the calc engine (Phase 4) before any breakdown is returned
 - [ ] T016 [P] Contract test: reject an ingested Charge Record missing `source_file`/`retrieved_at` in `backend/tests/contract/test_provenance_gate_ingestion.py`
 - [ ] T017 [P] Contract test: reject a computed Pricing Breakdown field missing `formula` or `source` in `backend/tests/contract/test_provenance_gate_calc.py`
 - [ ] T018 Setup FastAPI app skeleton, routing, and error handling in `backend/src/api/main.py`
@@ -81,7 +81,7 @@ Web application layout per plan.md: `backend/src/`, `backend/tests/`, `frontend/
 
 ### Implementation for User Story 2
 
-- [ ] T026 [P] [US2] Implement ASP+6% and ASP−27% formula functions in `backend/src/calc/reimbursement.py` (depends on T006)
+- [ ] T026 [P] [US2] Implement ASP+6% and ASP−27% formula functions in `backend/src/calc/reimbursement.py` (depends on T006); both return `omitted` rather than computing against a null/not-available ASP value, per the not-publicly-available edge case
 - [ ] T027 [P] [US2] Implement markup-ratio calculation (`payer_rate / asp_value`, per-payer not aggregate) plus the FR-005 `markup_ratio_flag` (true when ratio > 3) in `backend/src/calc/markup.py`, carrying each payer row's `billing_setting` through from the Charge Record untouched
 - [ ] T028 [P] [US2] Implement dose-line assembly (fixed / mg_per_kg × 70kg / mg_per_m2 × 1.7m², with `dose_regimen_cited`) in `backend/src/calc/dose.py` (depends on T006)
 - [ ] T029 [P] [US2] Implement CGT DRG-risk flag comparison (Q2041/Q2042/Q2055/Q2054/Q2056 vs. $269,139/$314,231) in `backend/src/calc/cgt_risk.py`
