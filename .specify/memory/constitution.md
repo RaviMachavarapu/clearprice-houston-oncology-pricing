@@ -1,27 +1,28 @@
 <!--
 Sync Impact Report
-Version change: 1.0.0 → 1.1.0
-Modified principles:
-  III. Per-Drug, Per-Hospital Sourcing — No Cross-Inference: added requirement
-     to state which specific regimen/indication was cited when a drug's FDA
-     label has more than one approved option.
-Added sections:
-  VI. Automated Provenance Enforcement (NON-NEGOTIABLE) — fresh-eyes review
-     found Principles I-IV were documentation-only commitments with no
-     mechanism forcing compliance; this principle requires automated
-     rejection of any unsourced record before it reaches the Docker volume
-     or UI.
+Version change: 1.2.0 → 1.3.0
+Modified sections:
+  Principle III — added an explicit carve-out: client-side, display-only
+     grouping of alias/duplicate payer name spellings into one canonical
+     checkbox/label (payer comparison page, per-hospital payer table filter)
+     is permitted and is NOT a Principle III violation, because it never
+     modifies, merges, or re-attributes any hospital's underlying Charge
+     Record — each row keeps its own hospital's original payer_name and
+     citation; only the selection/display grouping changes. Added the rule
+     that such grouping must never transitively merge two distinct payers
+     solely because both separately match a third, different
+     compound/joint-venture payer name.
+  Core Principles — noted that the Medicare-vs-WAC margin comparison is
+     computed independent of 340B enrollment (already implemented; now
+     explicit so a future reader doesn't assume all margin scenarios require
+     340B verification).
 Removed sections: none
 Templates requiring updates:
-  ✅ .specify/templates/plan-template.md — Constitution Check section will
-     reference all 6 principles (verify on next /speckit.plan run)
-  ✅ .specify/templates/spec-template.md — no conflicting mandatory sections
-  ✅ .specify/templates/tasks-template.md — task categorization compatible;
-     automated-check tasks (Principle VI) fit existing "testing" task type
-  ✅ speckit command/skill files — no CLAUDE-only references found requiring
-     change
-Follow-up TODOs: none — all placeholders resolved from the approved design
-  spec (docs/superpowers/specs/2026-07-15-clearprice-houston-oncology-pricing-design.md)
+  ✅ spec.md, plan.md, tasks.md, data-model.md, contracts/api.md,
+     quickstart.md updated in this session to reflect the payer comparison
+     page (User Story 4), payer-name canonicalization, and the WAC margin
+     scenario.
+Follow-up TODOs: none
 -->
 
 # ClearPrice Houston Oncology Pricing Constitution
@@ -60,6 +61,19 @@ another hospital's file, a system-wide average, or a "typical" figure. Where a
 drug's FDA label carries more than one approved regimen or indication, the
 specific regimen/indication used MUST be stated next to the figure — never
 left ambiguous as to which one was cited.
+
+*Carve-out — payer-name display grouping*: The UI MAY present two or more
+raw payer-name spellings that refer to the same real payer (case, whitespace,
+abbreviation, or concatenation variants — e.g. "United" / "UnitedHealthcare")
+under one canonical checkbox/label for selection and display purposes. This
+is not a Principle III violation as long as it never modifies, merges, or
+re-attributes any hospital's underlying Charge Record — each row keeps its
+own hospital's original `payer_name` and citation; only the checkbox a row
+responds to changes. The grouping logic MUST NOT transitively merge two
+distinct payers solely because both separately share a substring with a
+third, different compound/joint-venture payer name (e.g. "Aetna" and
+"Kelsey" must stay separate even though both partially match "Aetna-Kelsey
+Care").
 
 ### IV. Full Provenance on Every Rendered Number
 Every dollar figure, dose figure, or ratio shown in the UI carries a visible
@@ -103,10 +117,14 @@ a future phase in `MRF_Intelligence_Product_BA.md` Epic 6) and MUST NOT be
 implicitly assumed working in the meantime.
 
 **Drug set:** Exactly the 33 oncology drugs already defined in
-`oncology_top5_by_category.json`, across its 7 categories (Chemotherapy,
+`drugs_list.tsv`, across its 7 categories (Chemotherapy,
 Immunotherapy, Targeted Therapy, Hormone Therapy, Supportive Care,
 Antibody-Drug Conjugates, Cellular and Gene Therapy). No drug is added to or
-removed from this set without an explicit, separately reviewed decision.
+removed from this set without an explicit, separately reviewed decision. A
+cash/self-pay price (e.g. SingleCare, GoodRx, Drugs.com Price Guide) is never
+an acceptable substitute for WAC anywhere in this application — where no true
+WAC is publicly available, the figure is shown as not available, never
+replaced with a cash price.
 
 **Tech stack:** Python ingestion pipeline and calculation engine, served via a
 FastAPI JSON backend; a plain HTML/JS frontend (no build step) styled to match
@@ -140,4 +158,4 @@ or clarification only. All Spec Kit artifacts produced downstream (spec,
 plan, tasks, implementation) are reviewed for compliance with these
 principles at each stage's fresh-eyes review.
 
-**Version**: 1.1.0 | **Ratified**: 2026-07-15 | **Last Amended**: 2026-07-15
+**Version**: 1.3.0 | **Ratified**: 2026-07-15 | **Last Amended**: 2026-07-21

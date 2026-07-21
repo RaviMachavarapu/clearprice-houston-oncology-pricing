@@ -26,9 +26,15 @@ appears under `houston_hospitals/`, OR the hospital is recorded with
 
 ```bash
 curl http://localhost:8000/api/hospitals
+curl http://localhost:8000/api/status
 ```
 
-Expect 44 entries; count how many show `ingestion_status: success`.
+Expect 44 entries from `/api/hospitals`; count how many show
+`ingestion_status: success`. `/api/status`'s `ingestion` block is the
+single-glance check that ingestion actually ran for every locked hospital on
+this machine (`complete: true`, `not_yet_ingested: []`) — since
+`houston_hospitals/` is git-ignored, this is how two different machines
+confirm they're looking at the same dataset rather than a partial one.
 
 ## 3. Verify a single drug/hospital breakdown end-to-end
 
@@ -39,8 +45,8 @@ curl "http://localhost:8000/api/breakdowns?drugs=J9271"
 (Substitute `J9271` — Keytruda's code — or any other of the 33 tracked
 codes.) Expected outcome:
 - `breakdowns` contains one entry per successfully-ingested hospital that
-  publishes that code, each with `gross_charge_range`, `asp_line`,
-  `asp_plus6_line`, `wac_line`, `dose_line`, and `payer_table` fully
+  publishes that code, each with `gross_charge`, `asp`,
+  `asp_plus6_line`, `wac`, `dose`, and `payer_rates` fully
   populated with citations (per `data-model.md`).
 - `asp_minus27_line` present only for hospitals where
   `enrollment_340b == enrolled` (both HRSA checks agreed).
@@ -55,7 +61,17 @@ check 2+ drug checkboxes spanning different categories, confirm the results
 area renders a Section-4-style breakdown block per hospital per selected
 drug — not just one hospital per drug.
 
-## 5. Verify provenance enforcement (Principle VI)
+## 5. Verify the payer-comparison page
+
+Open `frontend/index.html`, click the "Payer Comparison" top tab. Check 1+
+drugs and 1+ payers (use "Select all"/"Clear all" to confirm the payer
+checklist has no duplicate entries for known alias pairs, e.g. "United" /
+"UnitedHealthcare"). Confirm the resulting hospital list only includes
+hospitals with a verified rate from a selected payer for a selected drug.
+Expand a hospital and confirm "All payer-specific negotiated rates" stays
+hidden until "Show other payers for this drug at this hospital" is checked.
+
+## 6. Verify provenance enforcement (Principle VI)
 
 ```bash
 docker compose -f docker/docker-compose.yml exec backend pytest tests/contract -v
@@ -66,7 +82,7 @@ missing a citation or formula is rejected before reaching the volume or the
 API — this is the automated check required by Constitution Principle VI,
 not a manual review step.
 
-## 6. Manual re-ingestion of one hospital
+## 7. Manual re-ingestion of one hospital
 
 ```bash
 curl -X POST http://localhost:8000/api/hospitals/{id}/refresh

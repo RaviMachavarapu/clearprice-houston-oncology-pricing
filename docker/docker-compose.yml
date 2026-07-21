@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../houston_hospitals:/app/houston_hospitals
+      - ../backend/src/reference_data:/app/src/reference_data
+    environment:
+      - HOUSTON_HOSPITALS_PATH=/app/houston_hospitals

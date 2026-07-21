@@ -1,0 +1,76 @@
+[
+  {
+    "code": "J9267",
+    "name": "Paclitaxel",
+    "category": "Chemotherapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 175,
+    "dose_regimen_cited": "First-line ovarian carcinoma, in combination with cisplatin: 175 mg/m2 IV over 3 hours every 3 weeks (label also lists an alternative regimen of 135 mg/m2 over 24 hours every 3 weeks; the 175 mg/m2/3-hour regimen was used here).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ea28753a-8631-460a-bfdc-b101eb8ac84a",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 0.3103,
+    "wac_source": {
+      "available": true,
+      "url": "https://cdn.pfizer.com/pfizercom/products/coprescribers/shortforms/PaclitaxelCOPriceDisclosureShortForm03102026.pdf",
+      "description": "Pfizer Colorado HB 19-1131 WAC price disclosure, data as of 10-Mar-2026. Lowest-dose vial: Paclitaxel 6 mg/mL (30 mg/5 mL) vial, WAC $9.31 = $0.3103/mg.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9045",
+    "name": "Carboplatin",
+    "category": "Chemotherapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 360,
+    "dose_regimen_cited": "Single-agent initial therapy of ovarian carcinoma: 360 mg/m2 IV every 4 weeks (label's fixed mg/m2 regimen; the label also provides a Calvert-formula AUC-based dosing option (dose = target AUC x (GFR + 25)), which does not fit a fixed mg/m2 or mg/kg pattern and was not used here).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c3ae9880-44bb-4f4e-93d8-8a5e21708a30",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "WAC not publicly available - no manufacturer Colorado HB 19-1131 price disclosure, state Medicaid pricing file, or drugs.com/other listing explicitly labeled as WAC could be located for carboplatin injection after extensive search (Pfizer's coprescribers WAC disclosure page lists paclitaxel and doxorubicin but not carboplatin). Only cash/discount-card prices (e.g. SingleCare) were found, which were excluded per instructions."
+    }
+  },
+  {
+    "code": "J9171",
+    "name": "Docetaxel",
+    "category": "Chemotherapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 75,
+    "dose_regimen_cited": "NSCLC, single-agent monotherapy in patients previously treated with platinum-based chemotherapy: 75 mg/m2 IV over 1 hour every 3 weeks (label also lists other regimens, e.g. 75 mg/m2 with prednisone for prostate cancer, and 60-100 mg/m2 for breast cancer; the NSCLC single-agent 75 mg/m2 regimen was used here).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0ec4bcc-93ea-4c41-a4b6-95ec19491807",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 3.489,
+    "wac_source": {
+      "available": true,
+      "url": "https://cdn.pfizer.com/pfizercom/products/coprescribers/shortforms/DOCETAXELCOPriceDisclosureShortForm10022022.pdf",
+      "description": "Pfizer Colorado HB 19-1131 WAC price disclosure, data as of 10-Feb-2022. Lowest-dose vial: Docetaxel 20 mg/2 mL vial, WAC $69.78 = $3.489/mg.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9000",
+    "name": "Doxorubicin HCl",
+    "category": "Chemotherapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 60,
+    "dose_regimen_cited": "Single-agent regimen: 60 mg/m2 IV every 21 days.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=971de64b-ff09-4370-afd9-6eb1093ad27d",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 0.616,
+    "wac_source": {
+      "available": true,
+      "url": "https://cdn.pfizer.com/pfizercom/products/coprescribers/shortforms/DoxorubicinHydrochlorideCOPriceDisclosureShortForm03102026.pdf",
+      "description": "Pfizer Colorado HB 19-1131 WAC price disclosure, data as of 10-Mar-2026. Lowest-dose vial: Doxorubicin Hydrochloride 10 mg/5 mL vial, WAC $6.16 = $0.616/mg.",
+      "access_date": "2026-07-16"
+    }
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "code": "J9271",
+    "name": "Pembrolizumab (Keytruda)",
+    "category": "Immunotherapy",
+    "dose_pattern": "fixed",
+    "dose_value": 200,
+    "dose_regimen_cited": "KEYTRUDA monotherapy across most approved solid-tumor indications (e.g., NSCLC, melanoma, HNSCC, HCC, MCC, cSCC): 200 mg IV every 3 weeks. (Label also lists an alternative fixed regimen of 400 mg IV every 6 weeks for the same indications; 200 mg Q3W was used as the primary/most commonly cited regimen.)",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9333c79b-d487-4538-a9f0-71b91a02b287",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 61.36,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.merckconnect.com/wp-content/uploads/sites/110/2024/04/Colorado-Pricing-Sheets-KEYTRUDA-pembrolizumab.pdf",
+      "description": "Merck Colorado C.R.S. 12-280-308 WAC disclosure: KEYTRUDA 100 mg/4 mL (25 mg/mL) single-use vial (NDC 00006-3026-02), WAC = $6,136.00 per vial = $61.36/mg.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9299",
+    "name": "Nivolumab (Opdivo)",
+    "category": "Immunotherapy",
+    "dose_pattern": "fixed",
+    "dose_value": 240,
+    "dose_regimen_cited": "OPDIVO monotherapy across most approved solid-tumor indications: 240 mg IV every 2 weeks. (Label also lists alternative fixed regimens of 480 mg IV every 4 weeks, and a legacy weight-based option of 3 mg/kg IV every 2 weeks for some indications; 240 mg Q2W was used as the primary regimen.)",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f570b9c4-6846-4de2-abfa-4d0a4ae4e394",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 33.1,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.bmspricinginformation.com/assets/buildeasy/bmspricinginformation/opdivo/en/resources/pdf/OPDIVO_Pricing_Info_Sheet.pdf",
+      "description": "Bristol Myers Squibb Colorado HB 19-1131 pricing disclosure: OPDIVO 40 mg/4 mL vial WAC = $1,323.85/vial (= $33.09625/mg); consistent across all vial sizes listed (100 mg/10 mL = $3,309.60; 120 mg/12 mL = $3,971.53; 240 mg/24 mL = $7,943.08), all ~$33.096/mg.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9022",
+    "name": "Atezolizumab (Tecentriq)",
+    "category": "Immunotherapy",
+    "dose_pattern": "fixed",
+    "dose_value": 1200,
+    "dose_regimen_cited": "TECENTRIQ monotherapy across most approved solid-tumor indications: 1200 mg IV every 3 weeks. (Label also lists alternative fixed regimens of 840 mg IV every 2 weeks and 1680 mg IV every 4 weeks; 1200 mg Q3W was used as the primary/most commonly cited regimen.)",
+    "dose_source": {
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/761034s043lbl.pdf",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 10.25,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Tecentriq.pdf",
+      "description": "Genentech Colorado HB 19-1131 pricing disclosure (source: AnalySource/First Databank, 07/01/2026): TECENTRIQ 840 mg/14 mL vial WAC = $8,606.62/vial (= $10.24598/mg, WAC unit price $614.75857/mL); 1,200 mg/20 mL vial WAC = $12,295.15/vial (~$10.246/mg).",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9228",
+    "name": "Ipilimumab (Yervoy)",
+    "category": "Immunotherapy",
+    "dose_pattern": "mg_per_kg",
+    "dose_value": 3,
+    "dose_regimen_cited": "YERVOY monotherapy for unresectable or metastatic melanoma: 3 mg/kg IV every 3 weeks for a maximum of 4 doses (Section 2.2, Recommended Dosage, Table 1).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2265ef30-253e-11df-8a39-0800200c9a66",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 181.09,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.bmspricinginformation.com/assets/buildeasy/bmspricinginformation/opdivo/en/resources/pdf/OPDIVO_Pricing_Info_Sheet.pdf",
+      "description": "Bristol Myers Squibb Colorado HB 19-1131 pricing disclosure (shared portfolio pricing document with OPDIVO): YERVOY 50 mg/10 mL vial WAC = $9,054.74/vial (= $181.0948/mg), consistent with the 200 mg/40 mL vial WAC of $36,218.89 (~$181.09/mg).",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9173",
+    "name": "Durvalumab (Imfinzi)",
+    "category": "Immunotherapy",
+    "dose_pattern": "fixed",
+    "dose_value": 1500,
+    "dose_regimen_cited": "IMFINZI monotherapy maintenance dosing for patients weighing 30 kg or more (e.g., limited-stage SCLC maintenance, biliary tract cancer, endometrial cancer, HCC in combination regimens): 1500 mg IV every 4 weeks (Section 2.2). (Label also lists a weight-based regimen of 10 mg/kg IV every 2 weeks used for unresectable Stage III NSCLC durvalumab monotherapy and for patients under 30 kg; 1500 mg fixed dosing was used as the primary regimen for this record.)",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8baba4ea-2855-42fa-9bd9-5a7548d4cec3",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "No current, primary manufacturer or state WAC disclosure could be located. AstraZeneca's Colorado/Vermont price-transparency disclosure pages returned HTTP 403 (access blocked) on all attempts, and no AstraZeneca WAC pricing-sheet PDF for Imfinzi (analogous to the Merck/Genentech/BMS Colorado HB 19-1131 disclosures found for the other four drugs) could be found via search. The only explicit 'WAC' figure found for durvalumab ($73.30 per 10-mg HCPCS unit) originates from a 2020 Oncology Practice Management coding-and-pricing table and is too stale/unverifiable as a current benchmark, so it was not used. Third-party listings found (drugpatentwatch.com, ndclist.com, pipelinemedical.com, 1mg.com) were either paywalled, mismatched to the wrong NDC, or reflected distributor/cash pricing rather than confirmed manufacturer WAC, so they were excluded per instructions not to substitute a cash/discount price for WAC."
+    }
+  }
+]

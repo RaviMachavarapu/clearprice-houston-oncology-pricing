@@ -1,0 +1,95 @@
+[
+  {
+    "code": "J9035",
+    "name": "Bevacizumab (Avastin)",
+    "category": "Targeted Therapy",
+    "dose_pattern": "mg_per_kg",
+    "dose_value": 5,
+    "dose_regimen_cited": "Metastatic colorectal cancer, first-line, in combination with intravenous 5-FU-based chemotherapy (IFL regimen): 5 mg/kg IV every 14 days. (Avastin label also lists 10 mg/kg q14d and 15 mg/kg q21d for other indications/regimens; 5 mg/kg q14d mCRC regimen was used as the cited figure.)",
+    "dose_source": {
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/125085s340lbl.pdf",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 796.94,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Avastin.pdf",
+      "description": "Genentech Colorado HB 19-1131 price disclosure: Avastin 100 mg/4 mL vial, WAC package price $796.94 per vial ($199.235/mL), sourced from AnalySource/First Databank, accessed 2026-07-16",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9355",
+    "name": "Trastuzumab (Herceptin)",
+    "category": "Targeted Therapy",
+    "dose_pattern": "mg_per_kg",
+    "dose_value": 2,
+    "dose_regimen_cited": "Metastatic breast cancer, weekly schedule maintenance dose: initial (loading) dose of 4 mg/kg IV, followed by subsequent weekly doses of 2 mg/kg IV until disease progression. 2 mg/kg (weekly maintenance rate) was used as the cited figure; the label also offers a 3-weekly schedule (8 mg/kg loading, 6 mg/kg q3w) as an alternative regimen.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=492dbdb2-077e-4064-bff3-372d6af0a7a2",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 1558.42,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Herceptin.pdf",
+      "description": "Genentech Colorado HB 19-1131 price disclosure: Herceptin 150 mg vial, WAC package/unit price $1,558.42 per vial, sourced from AnalySource/First Databank, accessed 2026-07-16",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9312",
+    "name": "Rituximab (Rituxan)",
+    "category": "Targeted Therapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 375,
+    "dose_regimen_cited": "Relapsed or refractory, low-grade or follicular, CD20-positive B-cell Non-Hodgkin's Lymphoma (NHL): 375 mg/m2 IV once weekly for 4 or 8 doses. (Label also lists a 375 mg/m2 x1 dose regimen for previously untreated follicular NHL in combination with CVP chemotherapy, and CLL dosing on a different schedule; 375 mg/m2 weekly NHL regimen was used as the cited figure.)",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b172773b-3905-4a1c-ad95-bab4b6126563",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 939.52,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Rituxan.pdf",
+      "description": "Genentech Colorado HB 19-1131 price disclosure: Rituxan 100 mg/10 mL vial, WAC package price $939.52 per vial ($93.952/mL); 500 mg/50 mL vial WAC package price $4,697.60. Sourced from AnalySource/First Databank, accessed 2026-07-16",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9055",
+    "name": "Cetuximab (Erbitux)",
+    "category": "Targeted Therapy",
+    "dose_pattern": "mg_per_m2",
+    "dose_value": 250,
+    "dose_regimen_cited": "Weekly maintenance dosage for colorectal cancer / squamous cell carcinoma of the head and neck: initial dose 400 mg/m2 IV, followed by 250 mg/m2 IV weekly. 250 mg/m2 (weekly maintenance rate) was used as the cited figure; label also lists a biweekly regimen (500 mg/m2 every 2 weeks) as an alternative.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8bc6397e-4bd8-4d37-a007-a327e4da34d9",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 836.49,
+    "wac_source": {
+      "available": true,
+      "url": "https://pricinginfo.lilly.com/assets/pdf/Colorado_WAC_Disclosure_Sheet-Erbitux.pdf",
+      "description": "Eli Lilly Colorado HB 19-1131 price disclosure: Erbitux 100 mg vial WAC $836.49; 200 mg vial WAC $1,672.98. Sourced from AnalySource/First Databank (accessed by Lilly 07/02/2025); document accessed 2026-07-16",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9303",
+    "name": "Panitumumab (Vectibix)",
+    "category": "Targeted Therapy",
+    "dose_pattern": "mg_per_kg",
+    "dose_value": 6,
+    "dose_regimen_cited": "Metastatic colorectal cancer (wild-type RAS), monotherapy or in combination with FOLFOX: 6 mg/kg IV every 14 days.",
+    "dose_source": {
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/125147s213lbl.pdf",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "WAC not publicly available. Extensive search (Amgen Colorado HB 19-1131 disclosure pages, AnalySource/First Databank citations, drugs.com price guide, state Medicaid pharmacy pricing files) did not surface a true WAC figure for Vectibix; only ASP-based reimbursement figures (e.g., buyandbill.com J9303 pages) and cash/discount pricing were found, which were excluded per instructions not to substitute cash/self-pay prices for WAC."
+    }
+  }
+]

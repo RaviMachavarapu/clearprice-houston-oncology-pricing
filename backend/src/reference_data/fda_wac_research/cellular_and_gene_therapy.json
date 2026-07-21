@@ -1,0 +1,97 @@
+[
+  {
+    "code": "Q2041",
+    "name": "Axicabtagene ciloleucel (Yescarta)",
+    "category": "Cellular and Gene Therapy",
+    "dose_pattern": "single_infusion_cell_dose",
+    "dose_value": 2,
+    "dose_regimen_cited": "Yescarta is administered as a single intravenous infusion. Per FDA-labeled Dosage and Administration (Section 2.1), the target dose is 2 x 10^6 CAR-positive viable T cells per kg body weight, with a maximum of 2 x 10^8 CAR-positive viable T cells total, delivered in an approximately 68 mL suspension. This single dosing formula applies uniformly to both the large B-cell lymphoma indications (1L relapsed/refractory disease, and relapsed/refractory disease after two or more prior lines of therapy) and the follicular lymphoma indication (relapsed/refractory disease after two or more prior lines of therapy) -- the label does not differentiate target dose by indication.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9b70606e-b99c-4272-a0f1-b5523cce0c59",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 503580,
+    "wac_source": {
+      "available": true,
+      "url": "https://hmpi.org/2026/02/18/car-t-therapy-escalating-costs-in-an-expanding-market/",
+      "description": "HMPI (Health Management Policy and Innovation) analysis citing Micromedex Red Book 2025 WAC data for Yescarta at $503,580. This supersedes the 2017 launch WAC of $373,000 (Gilead/Kite FDA-approval press release), which understated current acquisition cost after eight years of annual price increases.",
+      "access_date": "2026-07-20"
+    }
+  },
+  {
+    "code": "Q2042",
+    "name": "Tisagenlecleucel (Kymriah)",
+    "category": "Cellular and Gene Therapy",
+    "dose_pattern": "single_infusion_cell_dose",
+    "dose_value": 0.6,
+    "dose_regimen_cited": "Kymriah is administered as a single intravenous infusion. Per FDA-labeled Dosage and Administration (Section 2.1) of the full prescribing information: for pediatric and young adult B-cell acute lymphoblastic leukemia (up to 25 years of age), patients 50 kg or less receive 0.2 to 5.0 x 10^6 CAR-positive viable T cells per kg body weight, while patients above 50 kg receive a flat 0.1 to 2.5 x 10^8 CAR-positive viable T cells; for adult relapsed/refractory diffuse large B-cell lymphoma and follicular lymphoma, the labeled dose is a flat 0.6 to 6.0 x 10^8 CAR-positive viable T cells. The dose_value here (0.6) represents the lower bound of the adult DLBCL/follicular lymphoma flat-dose range in units of x10^8 cells; see dose_regimen_cited for the full weight-tiered ranges.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aad3ba54-dfd3-4cb3-9e2b-c5ef89559189",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 593533,
+    "wac_source": {
+      "available": true,
+      "url": "https://hmpi.org/2026/02/18/car-t-therapy-escalating-costs-in-an-expanding-market/",
+      "description": "HMPI (Health Management Policy and Innovation) analysis citing Micromedex Red Book 2025 WAC data for Kymriah at $593,533. This supersedes the 2017 launch WAC of $475,000 (Novartis FDA-approval announcement), which understated current acquisition cost after eight years of annual price increases.",
+      "access_date": "2026-07-20"
+    }
+  },
+  {
+    "code": "Q2055",
+    "name": "Idecabtagene vicleucel (Abecma)",
+    "category": "Cellular and Gene Therapy",
+    "dose_pattern": "single_infusion_cell_dose",
+    "dose_value": 300,
+    "dose_regimen_cited": "Abecma is administered as a single intravenous infusion, provided in one or more infusion bags. Per FDA-labeled Dosage and Administration (Section 2.1), the recommended dose range is 300 to 510 x 10^6 CAR-positive T cells, for the treatment of adult patients with relapsed or refractory multiple myeloma. This is a flat (non-weight-based) total-cell-count dose; dose_value reflects the lower bound of the labeled range in units of x10^6 cells.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b90c1fe7-f5cc-464e-958a-af36e9c26d7c",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 528312,
+    "wac_source": {
+      "available": true,
+      "url": "https://hmpi.org/2026/02/18/car-t-therapy-escalating-costs-in-an-expanding-market/",
+      "description": "HMPI (Health Management Policy and Innovation) analysis citing Micromedex Red Book 2025 WAC data for Abecma at $528,312. This supersedes the May 2024 VativoRx pharmacy-bulletin estimate of $498,410, reflecting a further year of annual price increases.",
+      "access_date": "2026-07-20"
+    }
+  },
+  {
+    "code": "Q2054",
+    "name": "Lisocabtagene maraleucel (Breyanzi)",
+    "category": "Cellular and Gene Therapy",
+    "dose_pattern": "single_infusion_cell_dose",
+    "dose_value": 50,
+    "dose_regimen_cited": "Breyanzi is administered as a single intravenous infusion, dosed as a 1:1 ratio of CAR-positive viable T cells from the CD8 and CD4 components. Per FDA-labeled Dosage and Administration (Section 2.1): for large B-cell lymphoma (LBCL) after two or more prior lines of therapy, the target dose is 50 to 110 x 10^6 CAR-positive viable T cells; for LBCL after one prior line of therapy, and for the CLL/SLL, follicular lymphoma, mantle cell lymphoma, and marginal zone lymphoma indications, the target dose is 90 to 110 x 10^6 CAR-positive viable T cells. This is a flat (non-weight-based) total-cell-count dose; dose_value reflects the lower bound of the broadest labeled range (50-110 x 10^6, for LBCL after 2+ prior lines) in units of x10^6 cells.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=594bb413-af3b-4b97-afb3-bfe2b174f2ed",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 531350,
+    "wac_source": {
+      "available": true,
+      "url": "https://hmpi.org/2026/02/18/car-t-therapy-escalating-costs-in-an-expanding-market/",
+      "description": "HMPI (Health Management Policy and Innovation) analysis citing Micromedex Red Book 2025 WAC data for Breyanzi at $531,350. This supersedes the 2021 launch WAC of $410,300 (Bristol Myers Squibb FDA-approval announcement), which understated current acquisition cost after four years of annual price increases.",
+      "access_date": "2026-07-20"
+    }
+  },
+  {
+    "code": "Q2056",
+    "name": "Ciltacabtagene autoleucel (Carvykti)",
+    "category": "Cellular and Gene Therapy",
+    "dose_pattern": "single_infusion_cell_dose",
+    "dose_value": 0.5,
+    "dose_regimen_cited": "Carvykti is administered as a single intravenous infusion. Per FDA-labeled Dosage and Administration (Section 2.1), the recommended dose range is 0.5 to 1.0 x 10^6 CAR-positive viable T cells per kg body weight, with a maximum dose of 1 x 10^8 CAR-positive viable T cells per single infusion regardless of body weight, for the treatment of adult patients with relapsed or refractory multiple myeloma. dose_value reflects the lower bound of the weight-based range in units of x10^6 cells/kg.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d040b91-3fb8-41db-ba7f-60a36f06e2c2",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 555310,
+    "wac_source": {
+      "available": true,
+      "url": "https://hmpi.org/2026/02/18/car-t-therapy-escalating-costs-in-an-expanding-market/",
+      "description": "HMPI (Health Management Policy and Innovation) analysis citing Micromedex Red Book 2025 WAC data for Carvykti at $555,310. This supersedes the May 2024 VativoRx pharmacy-bulletin estimate of $478,950, reflecting a further year of annual price increases.",
+      "access_date": "2026-07-20"
+    }
+  }
+]

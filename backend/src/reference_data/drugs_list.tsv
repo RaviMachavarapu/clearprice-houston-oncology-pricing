@@ -1,0 +1,33 @@
+[{'code': 'J9267', 'type': 'HCPCS'}]	Paclitaxel	Chemotherapy
+[{'code': 'J9045', 'type': 'HCPCS'}]	Carboplatin	Chemotherapy
+[{'code': 'J9171', 'type': 'HCPCS'}]	Docetaxel	Chemotherapy
+[{'code': 'J9000', 'type': 'HCPCS'}]	Doxorubicin HCl	Chemotherapy
+[{'code': 'J9271', 'type': 'HCPCS'}]	Pembrolizumab (Keytruda)	Immunotherapy
+[{'code': 'J9299', 'type': 'HCPCS'}]	Nivolumab (Opdivo)	Immunotherapy
+[{'code': 'J9022', 'type': 'HCPCS'}]	Atezolizumab (Tecentriq)	Immunotherapy
+[{'code': 'J9228', 'type': 'HCPCS'}]	Ipilimumab (Yervoy)	Immunotherapy
+[{'code': 'J9173', 'type': 'HCPCS'}]	Durvalumab (Imfinzi)	Immunotherapy
+[{'code': 'J9035', 'type': 'HCPCS'}]	Bevacizumab (Avastin)	Targeted Therapy
+[{'code': 'J9355', 'type': 'HCPCS'}]	Trastuzumab (Herceptin)	Targeted Therapy
+[{'code': 'J9312', 'type': 'HCPCS'}]	Rituximab (Rituxan)	Targeted Therapy
+[{'code': 'J9055', 'type': 'HCPCS'}]	Cetuximab (Erbitux)	Targeted Therapy
+[{'code': 'J9303', 'type': 'HCPCS'}]	Panitumumab (Vectibix)	Targeted Therapy
+[{'code': 'J1950', 'type': 'HCPCS'}]	Leuprolide acetate	Hormone Therapy
+[{'code': 'J9202', 'type': 'HCPCS'}]	Goserelin acetate	Hormone Therapy
+[{'code': 'J9395', 'type': 'HCPCS'}]	Fulvestrant (Faslodex)	Hormone Therapy
+[{'code': 'J9155', 'type': 'HCPCS'}]	Degarelix (Firmagon)	Hormone Therapy
+[{'code': 'J3315', 'type': 'HCPCS'}]	Triptorelin (Trelstar)	Hormone Therapy
+[{'code': 'J1442', 'type': 'HCPCS'}]	Filgrastim (Neupogen)	Supportive Care
+[{'code': 'J2405', 'type': 'HCPCS'}]	Ondansetron	Supportive Care
+[{'code': 'J0897', 'type': 'HCPCS'}]	Denosumab (Xgeva)	Supportive Care
+[{'code': 'J0885', 'type': 'HCPCS'}]	Epoetin alfa	Supportive Care
+[{'code': 'J9354', 'type': 'HCPCS'}]	Trastuzumab emtansine (Kadcyla)	Antibody-Drug Conjugates
+[{'code': 'J9358', 'type': 'HCPCS'}]	Fam-trastuzumab deruxtecan (Enhertu)	Antibody-Drug Conjugates
+[{'code': 'J9317', 'type': 'HCPCS'}]	Sacituzumab govitecan (Trodelvy)	Antibody-Drug Conjugates
+[{'code': 'J9042', 'type': 'HCPCS'}]	Brentuximab vedotin (Adcetris)	Antibody-Drug Conjugates
+[{'code': 'J9309', 'type': 'HCPCS'}]	Polatuzumab vedotin (Polivy)	Antibody-Drug Conjugates
+[{'code': 'Q2041', 'type': 'HCPCS'}]	Axicabtagene ciloleucel (Yescarta)	Cellular and Gene Therapy
+[{'code': 'Q2042', 'type': 'HCPCS'}]	Tisagenlecleucel (Kymriah)	Cellular and Gene Therapy
+[{'code': 'Q2055', 'type': 'HCPCS'}]	Idecabtagene vicleucel (Abecma)	Cellular and Gene Therapy
+[{'code': 'Q2054', 'type': 'HCPCS'}]	Lisocabtagene maraleucel (Breyanzi)	Cellular and Gene Therapy
+[{'code': 'Q2056', 'type': 'HCPCS'}]	Ciltacabtagene autoleucel (Carvykti)	Cellular and Gene Therapy

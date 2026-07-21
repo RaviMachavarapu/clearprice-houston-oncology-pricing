@@ -123,6 +123,57 @@ included with a guessed value.
 
 ---
 
+### User Story 4 - Compare hospitals by drug and payer across the whole Houston roster (Priority: P2)
+
+A user picks one or more of the 33 drugs (same category-checkbox UI as Story
+1) and one or more payers, drawn from the full set of payer/plan names seen
+across every ingested hospital (not just one hospital's file), and sees the
+list of hospitals that publish at least one selected drug with a verified
+rate from at least one selected payer. Expanding a hospital shows its full
+Story-2 breakdown for the matching drug(s); the "All payer-specific
+negotiated rates" section for that hospital/drug is collapsed behind an
+explicit "Show other payers for this drug at this hospital" checkbox rather
+than shown automatically, so the page's primary focus stays on the
+user-selected payer comparison rather than every payer at once.
+
+**Why this priority**: Extends Story 1/2's single-hospital drug lookup into a
+cross-hospital, payer-driven comparison — valuable once the core breakdown
+(Story 1/2) and trust layer (Story 3) exist, but not required for the app's
+core promise of a sourced, per-hospital breakdown.
+
+**Independent Test**: Select one drug and one payer known (from ingested
+data) to be published, verified, at exactly N hospitals; confirm the
+resulting hospital list has exactly N entries, and that a hospital's payer
+table stays collapsed until its toggle checkbox is checked.
+
+**Acceptance Scenarios**:
+
+1. **Given** the payer comparison page's payer checklist, **When** it loads,
+   **Then** it shows one checkbox per distinct payer across all ingested
+   hospitals, with "Select all" / "Clear all" actions, and no payer appears
+   twice under two different spellings of the same name (see dedup rule
+   below).
+2. **Given** the user selects drugs and payers, **When** results render,
+   **Then** only hospitals with a verified rate from at least one selected
+   payer for at least one selected drug appear.
+3. **Given** a matching hospital is expanded, **When** its breakdown first
+   renders, **Then** the "All payer-specific negotiated rates" section is
+   hidden until the user checks "Show other payers for this drug at this
+   hospital".
+4. **Given** a payer's name is spelled differently across hospitals (e.g.
+   "United" at one hospital, "UnitedHealthcare" at another, "Triwest Health
+   Alliance" vs. "Triwest Healthcare Alliance"), **When** the user selects
+   that payer's checkbox once, **Then** hospitals publishing either spelling
+   are included in the results, and the payer checklist shows one checkbox
+   for it, not one per spelling.
+5. **Given** two distinct payers happen to share a generic descriptor word
+   (e.g. "Aetna-Kelsey Care" vs. standalone "Aetna" and standalone "Kelsey"),
+   **When** the dedup logic groups payer names, **Then** "Aetna" and "Kelsey"
+   are never merged into the same checkbox on the strength of a third,
+   different compound/joint-venture name alone.
+
+---
+
 ### Edge Cases
 
 - What happens when a selected drug is published by zero Houston hospitals? The
@@ -140,6 +191,15 @@ included with a guessed value.
 - What happens when a drug's WAC/list benchmark or CMS ASP entry isn't
   available for some reason? That field shows "not publicly available" rather
   than a blank or a zero.
+- What happens when the same payer is spelled differently across two or more
+  hospitals' own MRFs (alias, abbreviation, or concatenation, e.g. "United" /
+  "UnitedHealthcare", "Independent Med System" / "Independent Medical
+  System")? On the payer-comparison page and on each hospital's own payer
+  table, the UI groups these under one canonical checkbox/label for
+  selection and display purposes only — this is a display-layer grouping,
+  not a change to any hospital's underlying Charge Record (Principle III):
+  each row still carries its own hospital's original `payer_name` and
+  citation, only the checkbox/label the user selects from is merged.
 
 ## Requirements *(mandatory)*
 
@@ -204,6 +264,33 @@ included with a guessed value.
 - **FR-015**: The scope of hospitals is fixed to the 44 Houston-area hospitals
   already reviewed and locked in the approved design; hospitals outside this
   set are out of scope for this feature.
+- **FR-016**: The system MUST provide a payer-comparison view, separate from
+  the per-hospital drug view (FR-001-FR-005), where the user selects drugs
+  (same category-checkbox UI) and payers (checkboxes covering every distinct
+  payer name seen across all ingested hospitals, with Select-all/Clear-all
+  actions), and sees only hospitals with a verified rate from at least one
+  selected payer for at least one selected drug.
+- **FR-017**: On the payer-comparison view only, the system MUST hide a
+  hospital's "All payer-specific negotiated rates" section behind an explicit
+  opt-in checkbox ("Show other payers for this drug at this hospital") rather
+  than displaying it automatically on expansion; the per-hospital drug view
+  (FR-001-FR-005) is unaffected and continues to show this section directly.
+- **FR-018**: Where the same payer's name is spelled or formatted differently
+  across hospitals' own MRFs (case, whitespace, abbreviation, or
+  concatenation variants), the system MUST present one canonical
+  checkbox/label for that payer in the payer checklist and in each hospital's
+  payer table, and MUST treat a selection of that checkbox as matching every
+  hospital's variant spelling — without altering, merging, or re-attributing
+  any hospital's own underlying Charge Record or its citation (Principle
+  III). Two distinct payer names MUST NOT be merged solely because both
+  separately share a substring with a third, different compound/joint-venture
+  payer name.
+- **FR-019**: In addition to the 340B-dependent margin scenarios (FR-006), the
+  system MUST always compute and show a Medicare-reimbursement-vs-WAC margin
+  comparison (ASP+6% reimbursement against the drug's WAC acquisition cost)
+  whenever both the ASP and WAC benchmarks are available, independent of the
+  hospital's 340B enrollment status, since WAC — not the 340B ceiling price —
+  is the acquisition cost a non-340B hospital actually pays.
 
 ### Key Entities
 
@@ -220,7 +307,15 @@ included with a guessed value.
   billing setting, source file + retrieval date.
 - **Pricing Breakdown**: The computed, per-hospital, per-drug view combining a
   hospital's charge records with the drug's benchmarks — the full output shown
-  to the user for User Story 2.
+  to the user for User Story 2. Includes both the always-available WAC-margin
+  scenario (FR-019) and, when 340B-enrolled, the three 340B-margin scenarios
+  (FR-006).
+- **Canonical Payer Group** (display-layer only, User Story 4): A set of raw
+  `payer_name` spellings across one or more hospitals' Charge Records that
+  refer to the same real payer, collapsed to a single checkbox/label in the
+  payer checklist and in each hospital's payer table. Does not modify or
+  merge the underlying Charge Records — purely a selection/display grouping
+  (Principle III still applies to the underlying data).
 
 ## Success Criteria *(mandatory)*
 
@@ -248,11 +343,23 @@ included with a guessed value.
   §2 are treated as final for this feature; re-litigating which hospitals
   belong in scope is out of scope here.
 - The 33-drug list and 7-category taxonomy already defined in
-  `oncology_top5_by_category.json` is treated as final for this feature.
+  `drugs_list.tsv` is treated as final for this feature.
+- A cash/self-pay price (e.g. SingleCare, GoodRx, Drugs.com Price Guide) is
+  never treated as a WAC benchmark anywhere in this app; where no true WAC
+  citation is publicly available, the WAC field shows "not publicly
+  available" rather than a cash price.
 - Only Houston Methodist Hospital's MRF has been ingested and parsed as of
   this spec; ingesting the remaining 43 hospitals is required work, not
   optional, but is a data-pipeline concern rather than a user-facing scenario
   change.
+- MD Anderson Cancer Center and Kelsey-Seybold Clinic — both real, prominent
+  Houston oncology providers — remain excluded from the 44-hospital scope for
+  v1. This is unresolved, not a reviewed decision: neither appears under any
+  checked name variant in `Texas_validated_final.xlsx`'s 700-row source list,
+  so no MRF link exists to ingest from. Per
+  `docs/superpowers/specs/2026-07-15-clearprice-houston-oncology-pricing-design.md`
+  §9, closing this gap requires locating each hospital's MRF outside that
+  source file, which is out of scope for this feature.
 - 340B enrollment status is sourced from HRSA's public covered-entity search
   (enrollment is public; the confidential ceiling price is not, and is
   explicitly out of scope — see `340B_pricing_research.md`).
@@ -266,3 +373,10 @@ included with a guessed value.
   refresh schedule. Data shown at any time reflects the state as of its last
   manual ingestion run, and the app surfaces when that was (per FR-012's
   retrieval-date citation) rather than implying it is always current.
+- The seed hospital list (`houston_candidates_final.json`) has at least one
+  known-bad source URL: "Baylor St. Luke's Medical Center - Houston" is mapped
+  to a Dignity Health MRF link for an unrelated Arizona facility
+  ("Arizona General Hospital Laveen"), which returns an HTML page rather than
+  a machine-readable file. Ingestion records this hospital as failed with the
+  resulting JSON-parse error rather than fabricating or guessing a corrected
+  URL; a human must re-source the correct link for that hospital.

@@ -78,6 +78,7 @@ backend/
 ├── src/
 │   ├── ingestion/            # per-hospital MRF fetch, parse, normalize (one module per format: json/csv/zip)
 │   ├── reference_data/       # 33-drug FDA-label dose/regimen records, CMS ASP entries, WAC citations, 44-hospital list
+│   └── fda_wac_research/ # raw per-category subagent research output (FDA dose + WAC), 7 categories from drugs_list.tsv — feeds Drug records above
 │   ├── verification/         # 340B HRSA OPAIS double-check, payer-scheme double-check
 │   ├── calc/                 # calculation engine (ASP+6%, ASP-27% estimate, markup ratio, dose scale-up)
 │   └── api/                  # FastAPI routes serving drugs, hospitals, and breakdowns
@@ -87,9 +88,9 @@ backend/
     └── unit/                   # calc engine formula tests
 
 frontend/
-├── index.html                 # drug checklist + results shell
+├── index.html                 # two top-level pages: Hospital (drug checklist + results shell) and Payer Comparison (drug checklist + global payer checklist + filtered hospital roster)
 ├── styles.css                 # matches ClearPrice_Build_Methodology.html visual style
-└── app.js                     # checklist interaction, results rendering, Section-4-style detail view
+└── app.js                     # checklist interaction, results rendering, Section-4-style detail view, payer-comparison page logic, client-side payer-name canonicalization (dedup)
 
 houston_hospitals/             # Docker volume mount point (git-ignored) — normalized per-hospital JSON, ingestion's only output target
 

@@ -1,0 +1,93 @@
+[
+  {
+    "code": "J1950",
+    "name": "Leuprolide acetate",
+    "category": "Hormone Therapy",
+    "dose_pattern": "fixed",
+    "dose_value": 7.5,
+    "dose_regimen_cited": "Lupron Depot 7.5 mg IM every 4 weeks (1-month depot) for advanced prostate cancer. The label also has 3-month (22.5 mg), 4-month (30 mg), and 6-month (45 mg) depot regimens for prostate cancer; the 1-month 7.5 mg regimen was used here.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cbc8f94e-7330-4465-05ad-16d64493a5dd",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 2253.63,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.e-abbvie.com/Upload_Images/PriceList/Pharmaceutical%20Product%20Wholesaler%20Acquisition%20Cost%20Price%20List.pdf",
+      "description": "AbbVie Pharmaceutical Product WAC Price List, effective 7/01/2026 — 'LUPRON DEPOT, URO, 7.5 MG PDS KIT', NDC 00074-3642-03",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9202",
+    "name": "Goserelin acetate",
+    "category": "Hormone Therapy",
+    "dose_pattern": "fixed",
+    "dose_value": 3.6,
+    "dose_regimen_cited": "Zoladex 3.6 mg SC implant every 28 days (1-month depot) for prostate cancer and breast cancer. The label also has a 10.8 mg implant every 12 weeks (3-month depot) regimen approved for prostate cancer only; the 3.6 mg monthly regimen was used here.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a906a5bd-d2ec-4e35-8962-c0c86c637630",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 1179.02,
+    "wac_source": {
+      "available": true,
+      "url": "https://documents.tersera.com/disclosures/CT_WAC_Form_Zoladex.pdf",
+      "description": "TerSera Therapeutics LLC Connecticut Public Act No. 23-171 WAC disclosure, pricing as of 06 April 2026 — ZOLADEX (goserelin) implant 3.6mg, NDC 70720-0950-36",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9395",
+    "name": "Fulvestrant (Faslodex)",
+    "category": "Hormone Therapy",
+    "dose_pattern": "fixed",
+    "dose_value": 500,
+    "dose_regimen_cited": "Faslodex 500 mg IM on Days 1, 15, and 29, then once monthly thereafter. This is the only approved adult dosing regimen (metastatic HR-positive breast cancer).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=83d7a440-e904-4e36-afb5-cb02b1c919f7",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "No true WAC figure could be located for Faslodex (brand, AstraZeneca) or generic fulvestrant injection. AstraZeneca's Vermont/Colorado price-transparency disclosure pages could not be retrieved (403/no direct Faslodex-specific PDF found), and Fresenius Kabi's published state-disclosure list (Colorado/Connecticut) does not include a fulvestrant entry. Only cash/discount-card prices (drugs.com, GoodRx, SingleCare, WellRx) were found, which were excluded per instructions not to substitute cash pricing for WAC."
+    }
+  },
+  {
+    "code": "J9155",
+    "name": "Degarelix (Firmagon)",
+    "category": "Hormone Therapy",
+    "dose_pattern": "fixed",
+    "dose_value": 80,
+    "dose_regimen_cited": "Maintenance dose: Firmagon 80 mg SC every 28 days, following an initial loading dose of 240 mg SC (administered as two 120 mg injections) on Day 1, for advanced prostate cancer. The maintenance dose value (80 mg) was used here since it matches an available single-vial WAC price.",
+    "dose_source": {
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2020/022201s016lbl.pdf",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 488.45,
+    "wac_source": {
+      "available": true,
+      "url": "https://ferringusa.com/Colorado-Firmagon-WAC-Pricing-Sheet",
+      "description": "Ferring Pharmaceuticals Colorado HB 19-1131 prescriber disclosure, pricing accurate as of September 24, 2025 — Firmagon (degarelix acetate) 1 vial of 80 mg, NDC 55566-8303-01, WAC $488.45 (the 240 mg starting-dose pack of two 120mg vials, NDC 55566-8403-01, is listed at $1,524.18)",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J3315",
+    "name": "Triptorelin (Trelstar)",
+    "category": "Hormone Therapy",
+    "dose_pattern": "fixed",
+    "dose_value": 3.75,
+    "dose_regimen_cited": "Trelstar 3.75 mg IM every 4 weeks (1-month depot) for advanced prostate cancer. The label also has 11.25 mg every 12 weeks (3-month depot) and 22.5 mg every 24 weeks (6-month depot) regimens; the 3.75 mg monthly regimen was used here.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1b84d62-a369-a4b7-5c41-dd1f553a18f3",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "No true WAC figure could be located for Trelstar. The manufacturer (Verity Pharmaceuticals / Debiopharm) does not appear to publish a Colorado HB 19-1131 or Vermont/Connecticut WAC disclosure for Trelstar that could be found via search. Only cash/discount-card prices (drugs.com, WebMDRx, RxSpark, Pocketpills) were found, which were excluded per instructions not to substitute cash pricing for WAC."
+    }
+  }
+]

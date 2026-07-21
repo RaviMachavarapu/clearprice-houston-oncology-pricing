@@ -1,0 +1,72 @@
+[
+  {
+    "code": "J1442",
+    "name": "Filgrastim (Neupogen)",
+    "category": "Supportive Care",
+    "dose_pattern": "weight_based",
+    "dose_value": 5,
+    "dose_regimen_cited": "FDA label (NEUPOGEN, filgrastim): for patients receiving myelosuppressive chemotherapy, the recommended starting dose is 5 mcg/kg/day subcutaneously (or IV), given no earlier than 24 hours after chemotherapy and continued until the expected neutrophil nadir has passed and ANC has recovered to the normal range (do not administer in the 24-hour period before chemotherapy). This is the standard oncology supportive-care regimen cited in Section 2.1 of the label; higher weight-based doses (e.g., 10 mcg/kg/day) apply only to non-oncology indications such as bone marrow transplant or severe chronic neutropenia and were not used here.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=97cc73cc-b5b7-458a-a933-77b00523e193",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "No Amgen-published true WAC disclosure for reference-product Neupogen (J1442) could be located via manufacturer transparency filings; the Nivestym biosimilar price disclosure previously used here is a different product and was removed per Constitution Principle III (no drug's price inferred from another drug's figure)."
+    }
+  },
+  {
+    "code": "J2405",
+    "name": "Ondansetron",
+    "category": "Supportive Care",
+    "dose_pattern": "weight_based",
+    "dose_value": 0.15,
+    "dose_regimen_cited": "FDA label (ondansetron injection, DailyMed): for prevention of nausea/vomiting associated with highly emetogenic chemotherapy, the recommended dose is 0.15 mg/kg IV, infused over 15 minutes beginning 30 minutes before the start of chemotherapy, with two additional doses of 0.15 mg/kg given 4 and 8 hours after the first dose (three doses totaling 0.45 mg/kg per day). The label also lists a fixed single-dose alternative (e.g., 8 mg or 32 mg IV single dose) for moderately/highly emetogenic regimens; the weight-based three-dose regimen was chosen because it is the originally-approved, most widely cited oncology CINV dosing schedule for the injectable formulation billed under J2405 (per-1-mg HCPCS unit).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a44601b-c31c-4779-a688-28cc4cc75e8b",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "Ondansetron injection is a fully genericized, decades-old multi-source generic (manufactured by numerous companies including Fresenius Kabi, Hospira/Pfizer, and others) with no manufacturer holding pricing power sufficient to trigger a state price-increase transparency disclosure. Searched Pfizer's Colorado HB19-1131 disclosure list (pfizer.com/coprescribers) directly \u2014 ondansetron does not appear on it \u2014 as well as Vermont AGO and Fresenius Kabi Colorado state-disclosure pages; no genuine manufacturer WAC disclosure or CMS ASP-derived true-WAC figure specific to this drug could be verified. Only cash/discount pricing (GoodRx, drugs.com) was found, which is explicitly disallowed as a WAC substitute."
+    }
+  },
+  {
+    "code": "J0897",
+    "name": "Denosumab (Xgeva)",
+    "category": "Supportive Care",
+    "dose_pattern": "fixed",
+    "dose_value": 120,
+    "dose_regimen_cited": "FDA label (XGEVA, denosumab): for prevention of skeletal-related events in patients with bone metastases from solid tumors and for hypercalcemia of malignancy, the recommended dose is 120 mg administered as a single subcutaneous injection every 4 weeks, in the upper arm, upper thigh, or abdomen. This is a fixed (non-weight-based) dose per Section 2 of the label, distinct from the 60 mg/6-month dosing used for the osteoporosis indication (Prolia), which does not apply to oncology supportive care.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=628f0998-1206-4001-aeee-18133aa9f3bf",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "Searched for an Amgen-published Colorado HB19-1131 or Vermont AGO price-transparency disclosure for Xgeva (denosumab) but could not locate a manufacturer-issued WAC disclosure PDF (Amgen does not appear to publish per-drug CO/VT statutory shortforms in the same manner as Pfizer). Amgen's own xgevahcp.com cost page discloses only patient co-pay assistance figures ($0 copay program), not a WAC dollar amount. Only cash/discount pricing aggregators (GoodRx, drugs.com, SingleCare) surfaced a specific dollar figure, which are explicitly disallowed as WAC substitutes."
+    }
+  },
+  {
+    "code": "J0885",
+    "name": "Epoetin alfa",
+    "category": "Supportive Care",
+    "dose_pattern": "fixed",
+    "dose_value": 40000,
+    "dose_regimen_cited": "FDA label (epoetin alfa, e.g. Epogen/Procrit/Retacrit) for treatment of anemia due to the effect of concomitant myelosuppressive chemotherapy in non-myeloid malignancies: the label provides two approved regimens \u2014 a weight-based 150 Units/kg subcutaneously three times per week, or a fixed 40,000 Units subcutaneously once weekly. The fixed 40,000 Units/week regimen was chosen as the standard/most commonly used oncology supportive-care dose (preferred in practice for dosing convenience).",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=1f2d0b28-9cc5-4523-80b8-637fdaf3f7a5",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 663.2,
+    "wac_source": {
+      "available": true,
+      "url": "https://d2cyvd34a2q3g.cloudfront.net/f160f061-6009-4364-9217-c0b9a88f290c/620796f7-dc23-4c25-82d6-89f7637ddd9b/620796f7-dc23-4c25-82d6-89f7637ddd9b_source__v.pdf",
+      "description": "Amgen EPOGEN (epoetin alfa) List Pricing sheet (as of Jan 7, 2026): linear WAC of $0.01658/Unit confirmed across every disclosed vial size (2,000 U=$33.16, 3,000 U=$49.74, 4,000 U=$66.32, 10,000 U=$165.80, 20,000 U=$331.60). No single vial is packaged at 40,000 U, so two 20,000 U vials ($331.60 x 2 = $663.20) were used for the 40,000 Units/week regimen dose. This is the Amgen reference-brand product (the product the CMS ASP file's average is benchmarked against), not a biosimilar substitute.",
+      "access_date": "2026-07-16"
+    }
+  }
+]

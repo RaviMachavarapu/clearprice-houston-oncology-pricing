@@ -3,6 +3,7 @@
 !oncology_top5_asp_reference.json
 !houston_candidates_final.json
 !.specify/**/*.json
+!backend/src/reference_data/fda_wac_research/*.json
 *_standardcharges.json
 *.csv
 !texas_dump.csv
@@ -12,3 +13,8 @@ __pycache__/
 *.pyc
 .venv/
 raw_mrf_cache/
+houston_hospitals/*
+/340B_CoveredEntityJson_Daily_*.zip
+.serena/
+
+cms_asp.html

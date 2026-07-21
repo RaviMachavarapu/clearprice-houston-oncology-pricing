@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClearPrice — Houston Oncology Drug Pricing Intelligence</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <p class="kicker">Houston Metro · Oncology Drug Pricing</p>
+      <h1>ClearPrice Oncology Pricing Intelligence</h1>
+      <p class="dek">Select the drugs you want to compare. We show every Houston-area hospital that publishes a matching charge, with a full Section&nbsp;4-style pricing breakdown citing every number back to its source.</p>
+      <div id="stats-bar" class="stats-bar"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="top-tabs" id="top-tabs">
+      <button type="button" class="top-tab active" data-page="hospital">Hospital</button>
+      <button type="button" class="top-tab" data-page="payer">Payer Comparison</button>
+    </nav>
+
+    <div id="page-hospital" class="page">
+      <section id="drug-picker">
+        <h2>1. Select drugs</h2>
+        <p class="lede">Select the drugs you want to compare, or search for a drug to quickly find and view its pricing details.</p>
+        <input id="drug-search" class="drug-search" type="search" placeholder="Filter drugs by name or category…" aria-label="Filter drugs">
+        <div id="drug-categories" class="catgrid">
+          <p class="empty-state">Loading drug list…</p>
+        </div>
+      </section>
+
+      <section id="roster-section" hidden>
+        <h2>2. Available hospitals</h2>
+        <p class="lede">Hospitals publishing at least one selected drug. Click a hospital to expand its pricing breakdown for the selected drugs. Every value cites its source, or is explicitly flagged as not publicly available. Hospitals with failed or missing ingestion are listed separately as unavailable.</p>
+        <div id="roster-list"></div>
+        <div id="unavailable-list"></div>
+      </section>
+    </div>
+
+    <div id="page-payer" class="page" hidden>
+      <section id="payer-drug-picker">
+        <h2>1. Select drugs</h2>
+        <p class="lede">Select one or more drugs to compare, or search for a drug to quickly find it.</p>
+        <input id="payer-drug-search" class="drug-search" type="search" placeholder="Filter drugs by name or category…" aria-label="Filter drugs">
+        <div id="payer-drug-categories" class="catgrid">
+          <p class="empty-state">Loading drug list…</p>
+        </div>
+      </section>
+
+      <section id="payer-picker">
+        <h2>2. Select payers</h2>
+        <p class="lede">Select one or more payers to compare across hospitals.</p>
+        <div class="payer-filter-panel">
+          <div class="payer-filter-header">
+            <div class="payer-filter-title">Payers</div>
+            <div class="payer-filter-actions">
+              <button type="button" id="payer-page-select-all" class="payer-filter-btn">Select all</button>
+              <button type="button" id="payer-page-clear-all" class="payer-filter-btn">Clear all</button>
+            </div>
+          </div>
+          <div id="payer-page-payer-grid" class="payer-filter-grid">
+            <p class="empty-state">Loading payer list…</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="payer-results-section" hidden>
+        <h2>3. Matching hospitals</h2>
+        <p class="lede">Hospitals publishing at least one selected drug with a verified rate from at least one selected payer. Click a hospital to expand its pricing breakdown.</p>
+        <div id="payer-roster-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="wrap sitefooter">
+    <p>Data sourced directly from each hospital's published machine-readable price transparency file and the HRSA 340B OPAIS covered-entity registry. No prices are estimated, inferred, or averaged across hospitals or drugs.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

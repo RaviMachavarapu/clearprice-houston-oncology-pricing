@@ -1,0 +1,95 @@
+[
+  {
+    "code": "J9354",
+    "name": "Trastuzumab emtansine",
+    "category": "Antibody-Drug Conjugates",
+    "dose_pattern": "weight_based",
+    "dose_value": 3.6,
+    "dose_regimen_cited": "Kadcyla (ado-trastuzumab emtansine) 3.6 mg/kg IV every 3 weeks (21-day cycle), for HER2-positive metastatic breast cancer (after prior taxane and trastuzumab-based therapy) and as adjuvant therapy for HER2-positive early breast cancer with residual invasive disease after neoadjuvant taxane and trastuzumab-based treatment. Unlike some other ADCs in this class, Kadcyla has only a single FDA-approved dose level (3.6 mg/kg q3w) across all approved indications, so no alternate regimen needed to be chosen.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23f3c1f4-0fc8-4804-a9e3-04cf25dd302e",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 4149.22,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Kadcyla.pdf",
+      "description": "Genentech Colorado House Bill 19-1131 Prescriber Price Disclosure for KADCYLA: WAC $4,149.22 per 100 mg vial and $6,638.74 per 160 mg vial, sourced from AnalySource/First Databank data as of 01/06/2026. The 100 mg vial price is used here as the representative unit WAC.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9358",
+    "name": "Fam-trastuzumab deruxtecan",
+    "category": "Antibody-Drug Conjugates",
+    "dose_pattern": "weight_based",
+    "dose_value": 5.4,
+    "dose_regimen_cited": "Enhertu (fam-trastuzumab deruxtecan-nxki) 5.4 mg/kg IV every 3 weeks (21-day cycle), for HER2-positive unresectable or metastatic breast cancer and HER2-low/HER2-ultralow unresectable or metastatic breast cancer — the original accelerated-approval dose and the most common oncology use case for this drug. Enhertu is also approved at 5.4 mg/kg for HER2-positive metastatic NSCLC, and at a higher 6.4 mg/kg dose specifically for HER2-positive metastatic gastric/gastroesophageal junction adenocarcinoma; the 5.4 mg/kg breast-cancer regimen was chosen as the representative FDA-labeled dose.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e67e73e-ddf4-4e4d-8b50-09d7514910b6",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": null,
+    "wac_source": {
+      "available": false,
+      "reason": "No manufacturer (Daiichi Sankyo / AstraZeneca) state price-transparency disclosure (Colorado HB19-1131, Vermont, Connecticut) could be located for Enhertu. A CMS Medicare Part B ASP payment-limit figure was found (HCPCS J9358 = $31.262/mg, effective Apr-Jun 2026) but this is the Medicare ASP-based reimbursement rate, not a manufacturer-published WAC list price, and per Constitution Principle I must not be substituted as WAC."
+    }
+  },
+  {
+    "code": "J9317",
+    "name": "Sacituzumab govitecan",
+    "category": "Antibody-Drug Conjugates",
+    "dose_pattern": "weight_based",
+    "dose_value": 10,
+    "dose_regimen_cited": "Trodelvy (sacituzumab govitecan-hziy) 10 mg/kg IV on Days 1 and 8 of a 21-day cycle, continued until disease progression or unacceptable toxicity, for metastatic triple-negative breast cancer, HR-positive/HER2-negative metastatic breast cancer, and locally advanced or metastatic urothelial cancer. 10 mg/kg (Days 1 and 8) is the single FDA-approved dose and schedule across all three approved indications; there is no alternate dose level on the label.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57a597d2-03f0-472e-b148-016d7169169d",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 20918,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.gileadpriceinfo.com/trodelvy",
+      "description": "Gilead's official TRODELVY pricing-information page: list price (WAC-based) example of $20,918 for one full 21-day cycle (Day 1 + Day 8 infusions combined) for a representative 72 kg patient dosed at the labeled 10 mg/kg, effective January 1, 2026. This is a per-cycle cost figure rather than a single per-vial price, reflecting how Gilead discloses cost on this manufacturer page.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9042",
+    "name": "Brentuximab vedotin",
+    "category": "Antibody-Drug Conjugates",
+    "dose_pattern": "weight_based",
+    "dose_value": 1.8,
+    "dose_regimen_cited": "Adcetris (brentuximab vedotin) 1.8 mg/kg IV every 3 weeks as single-agent therapy for relapsed/refractory classical Hodgkin lymphoma, post-autologous-HSCT consolidation in classical Hodgkin lymphoma at high risk of relapse, and relapsed/refractory systemic anaplastic large cell lymphoma. The label also includes a lower 1.2 mg/kg every-2-weeks regimen when Adcetris is combined with chemotherapy (e.g., A+AVD for frontline Stage III/IV classical Hodgkin lymphoma, or A+CHP for frontline peripheral T-cell lymphoma); the single-agent 1.8 mg/kg q3w regimen was chosen as the original and most-cited FDA-approved monotherapy dose.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3904f8dd-1aef-3490-e48f-bd55f32ed67f",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 13170.16,
+    "wac_source": {
+      "available": true,
+      "url": "https://cdn.pfizer.com/pfizercom/products/coprescribers/shortforms/ADCETRISCOPriceDisclosureShortForm03102026.pdf",
+      "description": "Pfizer Colorado House Bill 19-1131 Price Disclosure Short Form for ADCETRIS: WAC package price $13,170.16 for the 50 mg single-dose glass vial, data as of March 10, 2026.",
+      "access_date": "2026-07-16"
+    }
+  },
+  {
+    "code": "J9309",
+    "name": "Polatuzumab vedotin",
+    "category": "Antibody-Drug Conjugates",
+    "dose_pattern": "weight_based",
+    "dose_value": 1.8,
+    "dose_regimen_cited": "Polivy (polatuzumab vedotin-piiq) 1.8 mg/kg IV every 21 days for 6 cycles, given in combination with rituximab plus bendamustine for relapsed/refractory diffuse large B-cell lymphoma (DLBCL), or with R-CHP (rituximab, cyclophosphamide, doxorubicin, prednisone) for previously untreated DLBCL/high-grade B-cell lymphoma. 1.8 mg/kg every 3 weeks is the single FDA-approved dose used across both approved combination regimens; there is no alternate monotherapy dose on the label.",
+    "dose_source": {
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20a16ab2-f338-4abb-9dcd-254bd949a2bc",
+      "access_date": "2026-07-16"
+    },
+    "wac_value": 4354.28,
+    "wac_source": {
+      "available": true,
+      "url": "https://www.drugpricinglaw.com/content/dam/gene/drugpricinglaw/pdfs/Genentech-Polivy.pdf",
+      "description": "Genentech Colorado House Bill 19-1131 Prescriber Price Disclosure for POLIVY: WAC $4,354.28 per 30 mg vial and $20,319.93 per 140 mg vial, sourced from AnalySource/First Databank data as of 07/01/2026. The 30 mg vial price is used here as the representative unit WAC.",
+      "access_date": "2026-07-16"
+    }
+  }
+]
