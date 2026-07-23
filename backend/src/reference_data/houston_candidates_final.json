@@ -1,1 +1,261 @@
-{"working": [{"name": "BMC Baytown Hospital", "url": "https://bmchospitals.care/921981945_bmc-baytown-hospital_standardcharges.csv", "type": "csv"}, {"name": "Ben Taub Hospital", "url": "https://www.harrishealth.org/SiteCollectionDocuments/financials/charge%20description%20master/741536936_HarrisHealthBenTaubHospital_StandardCharges.zip", "type": "zip"}, {"name": "Children's Memorial Hermann Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_childrens-memorial-hermann-hospital_standardcharges.ashx", "type": "csv"}, {"name": "HCA Houston Healthcare Clear Lake", "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801360_HCA-HOUSTON-HEALTHCARE-CLEAR-LAKE_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D", "type": "json"}, {"name": "HCA Houston Healthcare Conroe", "url": "https://core.secure.ehc.com/src/util/detail-price-list/621801361_hca-houston-conroe_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Healthcare Kingwood", "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1619857_HCA-HOUSTON-HEALTHCARE-KINGWOOD_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D", "type": "json"}, {"name": "HCA Houston Healthcare Mainland", "url": "https://core.secure.ehc.com/src/util/detail-price-list/82-1635538_hca-houston-med-ctr_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Healthcare North Cypress", "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1619857_HCA-Houston-Healthcare-North-Cypress_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D", "type": "json"}, {"name": "HCA Houston Healthcare Northwest", "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/26-1512163_HCA-HOUSTON-HEALTHCARE-NORTHWEST_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D", "type": "json"}, {"name": "HCA Houston Healthcare Pearland", "url": "https://core.secure.ehc.com/src/util/detail-price-list/82-1635538_hca-houston-med-ctr_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Healthcare Southeast", "url": "https://core.secure.ehc.com/src/util/detail-price-list/621801359_hca-houston-southeast_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Healthcare Tomball", "url": "https://core.secure.ehc.com/src/util/detail-price-list/82-1635538_hca-houston-med-ctr_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Healthcare West", "url": "https://core.secure.ehc.com/src/util/detail-price-list/621801363_hca-houston-west_standardcharges.csv", "type": "csv"}, {"name": "HCA Houston Medical Center", "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/82-1635538_HCA-HOUSTON-HEALTHCARE-MEDICAL-CENTER_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D", "type": "json"}, {"name": "Houston Methodist Baytown Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/741287015_houston-methodist-baytown-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist Clear Lake Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/464389870_houston-methodist-clear-lake-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist Continuing Care Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/452118_houston-methodist-continuing-care-hospital_standard-charges.ashx", "type": "json"}, {"name": "Houston Methodist Cypress Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_houston-methodist-cypress-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/74110155_the-methodist-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist Sugar Land Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-sugar-land-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist The Woodlands Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_houston-methodist-the-woodlands-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist West Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-west-houston-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Methodist Willowbrook Hospital", "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-willowbrook-hospital_standardcharges.ashx", "type": "json"}, {"name": "Houston Physicians' Hospital", "url": "https://apim.services.craneware.com/api-pricing-transparency/api/public/aeda41f455cbab2353aaa85fdeb8c54d/charges/mrf", "type": "csv"}, {"name": "Memorial Hermann - Texas Medical Center", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_childrens-memorial-hermann-hospital_standardcharges.csv", "type": "csv"}, {"name": "Memorial Hermann Cypress Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-cypress-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Greater Heights Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-greater-heights-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Katy Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-katy-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Memorial City Medical Center", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_childrens-memorial-hermann-hospital_standardcharges.csv", "type": "csv"}, {"name": "Memorial Hermann Northeast Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-northeast-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Pearland Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-pearland-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Southeast Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-southeast-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann Southwest Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_childrens-memorial-hermann-hospital_standardcharges.csv", "type": "csv"}, {"name": "Memorial Hermann Sugar Land Hospital", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-sugar-land-hospital_standardcharges.ashx", "type": "csv"}, {"name": "Memorial Hermann The Woodlands Medical Center", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-the-woodlands-medical-center_standardcharges.ashx", "type": "csv"}, {"name": "St. Luke's Health - Sugar Land Hospital-Sugar Land, TX", "url": "https://www.commonspirit.org/content/dam/commonspiritorg/en/stluh/soho/finance/price-transparency/261947374-1659559573_st-lukes-community-development-corporation-sugar-land_standardcharges.json", "type": "json"}, {"name": "St. Luke's Health - The Woodlands Hospital", "url": "https://www.stlukeshealth.org/content/dam/stlukeshealth/documents/price-transparency-files/760536234_The-Woodlands-Hospital_standardcharges.csv", "type": "csv"}, {"name": "Texas Children's Hospital", "url": "https://www.texaschildrens.org/sites/tc/files/uploads/documents/741100555_texas-childrens-hospital_standardcharges.zip", "type": "zip"}, {"name": "Texas Children's Hospital The Woodlands", "url": "https://www.texaschildrens.org/sites/tc/files/uploads/documents/741100555_texas-childrens-hospital-the-woodlands_standardcharges.zip", "type": "zip"}, {"name": "Texas Children's Hospital West Campus", "url": "https://www.texasrehabhospital.com/docs/irftexasrehabilitationhospitaloffortworthlibraries/mar2026/270863232_texas-rehabilitation-hosptial-of-fort-worth--llc_standardcharges.csv.zip", "type": "zip"}, {"name": "UTMB Health Clear Lake Campus Hospital", "url": "https://www.neuropsychiatrichospitals.net/wp-content/uploads/2022/04/NPH-Price-Tranparency-Pricing.xlsx", "type": "xlsx"}, {"name": "UTMB Health League City Campus", "url": "https://core.secure.ehc.com/src/util/detail-price-list/46-4027347_medical-city-alliance_standardcharges.csv", "type": "csv"}, {"name": "Women's Memorial Hermann at Memorial Hermann Memorial City Medical Center", "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_tirr-memorial-hermann-_standardcharges.csv", "type": "csv"}], "broken": [{"name": "Cornerstone Specialty Hospitals Conroe", "status": "NOT_FOUND"}, {"name": "East Houston Hospital and Clinics", "status": "NOT_FOUND"}, {"name": "East Houston Medical Center", "status": "NOT_FOUND"}, {"name": "Elite Hospital Kingwood", "status": "NOT_FOUND"}, {"name": "Nexus Children's Hospital - Houston", "status": "NOT_FOUND"}, {"name": "PAM Voyages of Sugar Land", "status": "NOT_FOUND"}, {"name": "The Woodlands Specialty Hospital", "status": "NOT_FOUND"}, {"name": "Vibra Hospital of Clear Lake", "status": "NOT_FOUND"}, {"name": "Vibra Hospital of Houston", "status": "NOT_FOUND"}, {"name": "West Chase Houston Hospital", "status": "NOT_FOUND"}]}
+{
+  "working": [
+    {
+      "name": "BMC Baytown Hospital",
+      "url": "https://bmchospitals.care/921981945_bmc-baytown-hospital_standardcharges.csv",
+      "type": "csv"
+    },
+    {
+      "name": "Ben Taub Hospital",
+      "url": "https://www.harrishealth.org/SiteCollectionDocuments/financials/charge%20description%20master/741536936_HarrisHealthBenTaubHospital_StandardCharges.zip",
+      "type": "zip"
+    },
+    {
+      "name": "Children's Memorial Hermann Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_childrens-memorial-hermann-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "HCA Houston Healthcare Clear Lake",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801360_HCA-HOUSTON-HEALTHCARE-CLEAR-LAKE_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Conroe",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801361_HCA-HOUSTON-HEALTHCARE-CONROE_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Kingwood",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1619857_HCA-HOUSTON-HEALTHCARE-KINGWOOD_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Mainland",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801360_HCA-HOUSTON-MAINLAND_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare North Cypress",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1619857_HCA-Houston-Healthcare-North-Cypress_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Northwest",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/26-1512163_HCA-HOUSTON-HEALTHCARE-NORTHWEST_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Pearland",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/05-0631189_HCA-HOUSTON-HEALTHCARE-PEARLAND_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Southeast",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801359_HCA-HOUSTON-HEALTHCARE-SOUTHEAST_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare Tomball",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/82-1349955_HCA-HOUSTON-HEALTHCARE-TOMBALL_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Healthcare West",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1801363_HCA-HOUSTON-HEALTHCARE-WEST_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "HCA Houston Medical Center",
+      "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/82-1635538_HCA-HOUSTON-HEALTHCARE-MEDICAL-CENTER_standardcharges.json?si=pt-json-access-policy&spr=https&sv=2024-11-04&sr=c&sig=o5IofreS%2F7ETlsnhPakPWCwHVVUZRobywQ5wUKGjVuQ%3D",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Baytown Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/741287015_houston-methodist-baytown-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Clear Lake Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/464389870_houston-methodist-clear-lake-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Continuing Care Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/452118_houston-methodist-continuing-care-hospital_standard-charges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Cypress Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_houston-methodist-cypress-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/74110155_the-methodist-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Sugar Land Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-sugar-land-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist The Woodlands Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_houston-methodist-the-woodlands-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist West Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-west-houston-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Methodist Willowbrook Hospital",
+      "url": "https://www.houstonmethodist.org/-/media/files/patient-resources/760545192_methodist-willowbrook-hospital_standardcharges.ashx",
+      "type": "json"
+    },
+    {
+      "name": "Houston Physicians' Hospital",
+      "url": "https://apim.services.craneware.com/api-pricing-transparency/api/public/aeda41f455cbab2353aaa85fdeb8c54d/charges/mrf",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann - Texas Medical Center",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-texas-medical-center_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Cypress Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-cypress-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Greater Heights Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-greater-heights-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Katy Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-katy-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Memorial City Medical Center",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-memorial-city-medical-center_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Northeast Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-northeast-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Pearland Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-pearland-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Southeast Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-southeast-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Southwest Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-southwest-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann Sugar Land Hospital",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-sugar-land-hospital_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "Memorial Hermann The Woodlands Medical Center",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-the-woodlands-medical-center_standardcharges.ashx",
+      "type": "csv"
+    },
+    {
+      "name": "St. Luke's Health - Sugar Land Hospital-Sugar Land, TX",
+      "url": "https://www.commonspirit.org/content/dam/commonspiritorg/en/stluh/soho/finance/price-transparency/261947374-1659559573_st-lukes-community-development-corporation-sugar-land_standardcharges.json",
+      "type": "json"
+    },
+    {
+      "name": "St. Luke's Health - The Woodlands Hospital",
+      "url": "https://www.commonspirit.org/content/dam/commonspiritorg/en/stluh/soho/finance/price-transparency/760536234-1942208616_st-lukes-community-health-services-st-lukes-the-woodlands-hospital_standardcharges.json",
+      "type": "json"
+    },
+    {
+      "name": "Texas Children's Hospital",
+      "url": "https://www.texaschildrens.org/sites/tc/files/uploads/documents/741100555_texas-childrens-hospital_standardcharges.zip",
+      "type": "zip"
+    },
+    {
+      "name": "Texas Children's Hospital The Woodlands",
+      "url": "https://www.texaschildrens.org/sites/tc/files/uploads/documents/741100555_texas-childrens-hospital-the-woodlands_standardcharges.zip",
+      "type": "zip"
+    },
+    {
+      "name": "Texas Children's Hospital West Campus",
+      "url": "https://www.texaschildrens.org/sites/tc/files/uploads/documents/741100555_texas-childrens-hospital-west-campus_standardcharges.zip",
+      "type": "zip"
+    },
+    {
+      "name": "UTMB Health Clear Lake Campus Hospital",
+      "url": "https://liveutmb.sharepoint.com/:x:/s/collaboration/webfiles/EXxx-KfEbOZNqDZ52D-EicQBE8nnpDp5CQyKD0F86zxp4A?download=1",
+      "type": "csv"
+    },
+    {
+      "name": "UTMB Health League City Campus",
+      "url": "https://liveutmb.sharepoint.com/:x:/s/collaboration/webfiles/EXxx-KfEbOZNqDZ52D-EicQBE8nnpDp5CQyKD0F86zxp4A?download=1",
+      "type": "csv"
+    },
+    {
+      "name": "Women's Memorial Hermann at Memorial Hermann Memorial City Medical Center",
+      "url": "https://memorialhermann.org/-/media/memorial-hermann/org/files/patients-and-visitors/cms-standard-hospital-charges/741152597_memorial-hermann-memorial-city-medical-center_standardcharges.ashx",
+      "type": "csv"
+    }
+  ],
+  "broken": [
+    {
+      "name": "Cornerstone Specialty Hospitals Conroe",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "East Houston Hospital and Clinics",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "East Houston Medical Center",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "Elite Hospital Kingwood",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "Nexus Children's Hospital - Houston",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "PAM Voyages of Sugar Land",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "The Woodlands Specialty Hospital",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "Vibra Hospital of Clear Lake",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "Vibra Hospital of Houston",
+      "status": "NOT_FOUND"
+    },
+    {
+      "name": "West Chase Houston Hospital",
+      "status": "NOT_FOUND"
+    }
+  ]
+}

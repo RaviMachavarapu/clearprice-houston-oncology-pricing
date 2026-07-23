@@ -163,9 +163,11 @@ def ingest_hospital(hospital: Hospital) -> dict:
             records, raw_text = _parse(
                 hospital.mrf_type, response, hospital.id, hospital.name, hospital.mrf_url
             )
+            all_rates = [rate for record in records for rate in record.payer_rates]
+            if all_rates:
+                verify_payer_rates(all_rates, raw_text)
             for record in records:
                 assert_charge_record_provenance(record)
-                verify_payer_rates(record.payer_rates, raw_text)
 
         result["ingestion_status"] = "success"
         result["charge_records"] = [_record_to_dict(r) for r in records]

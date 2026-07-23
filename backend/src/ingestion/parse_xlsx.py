@@ -5,7 +5,11 @@ import io
 import openpyxl
 
 from src.ingestion.charge_record import ChargeRecord
-from src.ingestion.tall_format import parse_tall_rows
+from src.ingestion.tall_format import (
+    find_tracked_code_column_indices,
+    parse_tall_rows,
+    row_matches_tracked_code,
+)
 
 _MAX_HEADER_SCAN_ROWS = 10
 
@@ -40,11 +44,16 @@ def parse_xlsx_mrf(raw_bytes: bytes, hospital_id: str, source_file: str) -> tupl
 
     header_idx = _find_header_row(all_rows)
     if header_idx is None:
-        return [], raw_text
+        raise ValueError(
+            "could not find CMS tall-format header row (no 'code|1' column in first "
+            f"{_MAX_HEADER_SCAN_ROWS} rows) — file is not in the expected standard-charges layout"
+        )
 
     header = [str(c).strip() if c is not None else "" for c in all_rows[header_idx]]
+    code_col_indices = find_tracked_code_column_indices(header)
     dict_rows = []
     for row in all_rows[header_idx + 1 :]:
-        dict_rows.append({header[i]: row[i] for i in range(len(header)) if i < len(row)})
+        if row_matches_tracked_code(row, code_col_indices):
+            dict_rows.append({header[i]: row[i] for i in range(len(header)) if i < len(row)})
 
     return parse_tall_rows(dict_rows, hospital_id, source_file), raw_text

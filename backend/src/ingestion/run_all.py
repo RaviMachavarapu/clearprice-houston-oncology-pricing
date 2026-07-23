@@ -18,12 +18,12 @@ def run_all() -> None:
         status = result["ingestion_status"]
         if status == "success":
             succeeded += 1
-            print(f"[OK]     {hospital.id}: {len(result['charge_records'])} charge records")
+            print(f"[OK]     {hospital.id}: {len(result['charge_records'])} charge records", flush=True)
         else:
             failed += 1
-            print(f"[FAILED] {hospital.id}: {status}")
+            print(f"[FAILED] {hospital.id}: {status}", flush=True)
 
-    print(f"\n{succeeded}/{len(hospitals)} hospitals ingested successfully, {failed} failed.")
+    print(f"\n{succeeded}/{len(hospitals)} hospitals ingested successfully, {failed} failed.", flush=True)
 
 
 if __name__ == "__main__":

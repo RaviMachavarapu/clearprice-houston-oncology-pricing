@@ -16,6 +16,21 @@ _CODE_COL = re.compile(r"^code\|(\d+)$")
 _PAYER_COL = re.compile(r"^standard_charge\|(.+)\|(.+)\|negotiated_dollar$")
 
 
+def find_tracked_code_column_indices(header: list) -> list[int]:
+    """Positions in `header` that hold a `code|N` column. Lets callers check
+    whether a raw row (list of cell values) matches a tracked drug code via cheap
+    index lookups, without building a full column-name dict for every row first —
+    the dict is only worth building for the handful of rows that actually match
+    (CMS tall-format files can have hundreds of payer columns and hundreds of
+    thousands of rows; dict-per-row for all of them dominates parse time).
+    """
+    return [i for i, c in enumerate(header) if c and _CODE_COL.match(c)]
+
+
+def row_matches_tracked_code(row: list, code_col_indices: list[int]) -> bool:
+    return any(i < len(row) and row[i] in _TRACKED_CODES for i in code_col_indices)
+
+
 def parse_tall_rows(rows: Iterable[dict], hospital_id: str, source_file: str) -> list[ChargeRecord]:
     """Parse CMS "tall" format rows (already dict-per-row, whether sourced from a
     CSV DictReader or an Excel worksheet) into Charge Records, filtered to the 33

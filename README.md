@@ -26,7 +26,7 @@ provenance on every rendered number).
 backend/
 ├── src/
 │   ├── ingestion/       # fetch + parse + normalize each hospital's MRF
-│   ├── reference_data/  # 33-drug FDA dose/ASP/WAC records, 44-hospital list
+│   ├── reference_data/  # 33-drug FDA dose/ASP/WAC records, 43-hospital list
 │   ├── verification/    # 340B enrollment + payer-scheme double-checks
 │   ├── calc/            # pricing/margin formulas, breakdown assembler
 │   └── api/             # FastAPI routes

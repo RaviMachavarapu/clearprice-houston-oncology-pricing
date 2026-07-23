@@ -3,6 +3,7 @@ from __future__ import annotations
 import io
 
 import openpyxl
+import pytest
 
 from src.ingestion.parse_xlsx import parse_xlsx_mrf
 
@@ -53,7 +54,7 @@ def test_finds_header_row_past_a_preamble():
     assert records[0].drug_code == "J9354"
 
 
-def test_returns_empty_when_no_recognizable_header():
+def test_raises_when_no_recognizable_header():
     data = _build_workbook([["just", "some", "notes"], ["nothing", "tabular", "here"]])
-    records, _raw_text = parse_xlsx_mrf(data, "test-hospital", "https://example.org/test.xlsx")
-    assert records == []
+    with pytest.raises(ValueError, match="could not find CMS tall-format header row"):
+        parse_xlsx_mrf(data, "test-hospital", "https://example.org/test.xlsx")
